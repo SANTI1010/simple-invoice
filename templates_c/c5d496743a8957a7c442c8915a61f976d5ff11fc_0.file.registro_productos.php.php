@@ -1,7 +1,32 @@
-	<?php
-		if (isset($con))
+<?php
+/* Smarty version 3.1.34-dev-7, created on 2020-12-15 00:00:38
+  from 'C:\xampp\htdocs\simple-invoice-master\modal\registro_productos.php' */
+
+/* @var Smarty_Internal_Template $_smarty_tpl */
+if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
+  'version' => '3.1.34-dev-7',
+  'unifunc' => 'content_5fd7ee96d3c1f7_87659078',
+  'has_nocache_code' => false,
+  'file_dependency' => 
+  array (
+    'c5d496743a8957a7c442c8915a61f976d5ff11fc' => 
+    array (
+      0 => 'C:\\xampp\\htdocs\\simple-invoice-master\\modal\\registro_productos.php',
+      1 => 1607986835,
+      2 => 'file',
+    ),
+  ),
+  'includes' => 
+  array (
+  ),
+),false)) {
+function content_5fd7ee96d3c1f7_87659078 (Smarty_Internal_Template $_smarty_tpl) {
+?>	<?php echo '<?php
+		';?>
+if (isset($con))
 		{
-	?>
+	<?php echo '?>';?>
+
 	<!-- Modal -->
 	<div class="modal fade" id="nuevoProducto" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
 	  <div class="modal-dialog" role="document">
@@ -56,6 +81,9 @@
 		</div>
 	  </div>
 	</div>
-	<?php
-		}
-	?>
+	<?php echo '<?php
+		';?>
+}
+	<?php echo '?>';
+}
+}

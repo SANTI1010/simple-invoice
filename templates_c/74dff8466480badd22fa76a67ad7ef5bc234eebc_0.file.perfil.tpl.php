@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.34-dev-7, created on 2020-12-14 23:22:53
+/* Smarty version 3.1.34-dev-7, created on 2020-12-14 23:53:30
   from 'C:\xampp\htdocs\simple-invoice-master\templates\perfil.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.34-dev-7',
-  'unifunc' => 'content_5fd7e5bda97371_47356687',
+  'unifunc' => 'content_5fd7ecea1b3583_11374467',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '74dff8466480badd22fa76a67ad7ef5bc234eebc' => 
     array (
       0 => 'C:\\xampp\\htdocs\\simple-invoice-master\\templates\\perfil.tpl',
-      1 => 1607984551,
+      1 => 1607986379,
       2 => 'file',
     ),
   ),
@@ -20,9 +20,10 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
     'file:head.tpl' => 1,
     'file:navbar.tpl' => 1,
+    'file:footer.tpl' => 1,
   ),
 ),false)) {
-function content_5fd7e5bda97371_47356687 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5fd7ecea1b3583_11374467 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_subTemplateRender("file:head.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 $_smarty_tpl->_subTemplateRender("file:navbar.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 ?>
@@ -164,17 +165,11 @@ echo $row["codigo_postal"];<?php echo '?>';?>
 		</form>
       </div>
 
-	
-	<?php echo '<?php
-	';?>
-include("footer.php");
-	<?php echo '?>';?>
-
   </body>
 </html>
-<?php echo '<script'; ?>
- type="text/javascript" src="js/bootstrap-filestyle.js"> <?php echo '</script'; ?>
->
+	<?php $_smarty_tpl->_subTemplateRender("file:footer.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
+?>
+
 <?php echo '<script'; ?>
 >
 $( "#perfil" ).submit(function( event ) {

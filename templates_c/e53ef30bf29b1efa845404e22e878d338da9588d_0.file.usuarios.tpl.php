@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.34-dev-7, created on 2020-12-14 23:18:07
+/* Smarty version 3.1.34-dev-7, created on 2020-12-14 23:52:38
   from 'C:\xampp\htdocs\simple-invoice-master\templates\usuarios.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.34-dev-7',
-  'unifunc' => 'content_5fd7e49f2e10b5_51260204',
+  'unifunc' => 'content_5fd7ecb6313072_29258809',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'e53ef30bf29b1efa845404e22e878d338da9588d' => 
     array (
       0 => 'C:\\xampp\\htdocs\\simple-invoice-master\\templates\\usuarios.tpl',
-      1 => 1607984281,
+      1 => 1607986346,
       2 => 'file',
     ),
   ),
@@ -20,9 +20,10 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
     'file:head.tpl' => 1,
     'file:navbar.tpl' => 1,
+    'file:footer.tpl' => 1,
   ),
 ),false)) {
-function content_5fd7e49f2e10b5_51260204 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5fd7ecb6313072_29258809 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_subTemplateRender("file:head.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 $_smarty_tpl->_subTemplateRender("file:navbar.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 ?>
@@ -70,20 +71,10 @@ include("modal/registro_usuarios.php");
 		</div>
 
 	</div>
-	<hr>
-	<?php echo '<?php
-	';?>
-include("footer.php");
-	<?php echo '?>';?>
 
-	<?php echo '<script'; ?>
- type="text/javascript" src="js/usuarios.js"><?php echo '</script'; ?>
->
-
+	<?php $_smarty_tpl->_subTemplateRender("file:footer.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
+?>
 	
-	
-
-
   </body>
 </html>
 <?php echo '<script'; ?>

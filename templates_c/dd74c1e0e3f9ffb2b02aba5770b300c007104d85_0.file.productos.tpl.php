@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.34-dev-7, created on 2020-12-14 23:24:43
+/* Smarty version 3.1.34-dev-7, created on 2020-12-14 23:59:29
   from 'C:\xampp\htdocs\simple-invoice-master\templates\productos.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.34-dev-7',
-  'unifunc' => 'content_5fd7e62b13daf7_05635829',
+  'unifunc' => 'content_5fd7ee5159f009_56638036',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'dd74c1e0e3f9ffb2b02aba5770b300c007104d85' => 
     array (
       0 => 'C:\\xampp\\htdocs\\simple-invoice-master\\templates\\productos.tpl',
-      1 => 1607984666,
+      1 => 1607986768,
       2 => 'file',
     ),
   ),
@@ -20,18 +20,17 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
     'file:head.tpl' => 1,
     'file:navbar.tpl' => 1,
+    'file:../modal/registro_productos.php' => 1,
+    'file:../modal/editar_productos.php' => 1,
+    'file:footer.tpl' => 1,
   ),
 ),false)) {
-function content_5fd7e62b13daf7_05635829 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5fd7ee5159f009_56638036 (Smarty_Internal_Template $_smarty_tpl) {
 ?>	<?php $_smarty_tpl->_subTemplateRender("file:head.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 ?>
 	<?php $_smarty_tpl->_subTemplateRender("file:navbar.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 ?>
 
-	<!DOCTYPE html>
-<html lang="en">
-  <head>
-  </head>
   <body>
     <div class="container">
 	<div class="panel panel-info">
@@ -44,12 +43,11 @@ function content_5fd7e62b13daf7_05635829 (Smarty_Internal_Template $_smarty_tpl)
 		<div class="panel-body">
 		
 			
-			
-			<?php echo '<?php
-			';?>
-include("modal/registro_productos.php");
-			include("modal/editar_productos.php");
-			<?php echo '?>';?>
+			<?php $_smarty_tpl->_subTemplateRender("file:../modal/registro_productos.php", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
+?>
+			<?php $_smarty_tpl->_subTemplateRender("file:../modal/editar_productos.php", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
+?>
+
 
 			<form class="form-horizontal" role="form" id="datos_cotizacion">
 				
@@ -74,16 +72,10 @@ include("modal/registro_productos.php");
 </div>
 		 
 	</div>
-	<hr>
-	<?php echo '<?php
-	';?>
-include("footer.php");
-	<?php echo '?>';?>
-
-	<?php echo '<script'; ?>
- type="text/javascript" src="js/productos.js"><?php echo '</script'; ?>
->
+  <?php $_smarty_tpl->_subTemplateRender("file:footer.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
+?> 	
   </body>
+ 
 </html>
 <?php echo '<script'; ?>
 >

@@ -37,20 +37,11 @@
 			</form>
 				<div id="resultados"></div><!-- Carga los datos ajax -->
 				<div class='outer_div'></div><!-- Carga los datos ajax -->
-			
-		
-	
-			
-			
-			
+					
   </div>
 </div>
 		 
 	</div>
-	<hr>
-	<?php
-	include("footer.php");
-	?>
-	<script type="text/javascript" src="js/clientes.js"></script>
+		{include file="footer.tpl"}
   </body>
 </html>

@@ -42,16 +42,9 @@
 		</div>
 
 	</div>
-	<hr>
-	<?php
-	include("footer.php");
-	?>
-	<script type="text/javascript" src="js/usuarios.js"></script>
 
+	{include file="footer.tpl"}
 	
-	
-
-
   </body>
 </html>
 <script>

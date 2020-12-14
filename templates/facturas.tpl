@@ -1,4 +1,3 @@
-
 <title>Facturas</title>
 	{include file="head.tpl"}
 	{include file="navbar.tpl"}
@@ -38,11 +37,10 @@
 	</div>
 	<hr>
 	
+	{include file="footer.tpl"}
+	  	
 
-	<script type="text/javascript" src="js/VentanaCentrada.js"></script>
-	<script type="text/javascript" src="js/facturas.js"></script>
   </body>
 
-  	{include file="footer.tpl"}
 
 </html>

@@ -1,10 +1,6 @@
 	{include file="head.tpl"}
 	{include file="navbar.tpl"}
 
-	<!DOCTYPE html>
-<html lang="en">
-  <head>
-  </head>
   <body>
     <div class="container">
 	<div class="panel panel-info">
@@ -17,11 +13,10 @@
 		<div class="panel-body">
 		
 			
-			
-			<?php
-			include("modal/registro_productos.php");
-			include("modal/editar_productos.php");
-			?>
+			{include file="../modal/registro_productos.php"}
+			{include file="../modal/editar_productos.php"}
+
+
 			<form class="form-horizontal" role="form" id="datos_cotizacion">
 				
 						<div class="form-group row">
@@ -45,12 +40,9 @@
 </div>
 		 
 	</div>
-	<hr>
-	<?php
-	include("footer.php");
-	?>
-	<script type="text/javascript" src="js/productos.js"></script>
+  {include file="footer.tpl"} 	
   </body>
+ 
 </html>
 <script>
 $( "#guardar_producto" ).submit(function( event ) {

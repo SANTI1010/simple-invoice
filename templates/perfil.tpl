@@ -110,13 +110,10 @@
 		</form>
       </div>
 
-	
-	<?php
-	include("footer.php");
-	?>
   </body>
 </html>
-<script type="text/javascript" src="js/bootstrap-filestyle.js"> </script>
+	{include file="footer.tpl"}
+
 <script>
 $( "#perfil" ).submit(function( event ) {
   $('.guardar_datos').attr("disabled", true);

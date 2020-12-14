@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.34-dev-7, created on 2020-12-14 23:05:34
+/* Smarty version 3.1.34-dev-7, created on 2020-12-14 23:51:54
   from 'C:\xampp\htdocs\simple-invoice-master\templates\clientes.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.34-dev-7',
-  'unifunc' => 'content_5fd7e1aeae3ac8_66984936',
+  'unifunc' => 'content_5fd7ec8a00b879_32929666',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'd0de9a0fdeee0b9ec4c0fe6ed1ac1051f37a9188' => 
     array (
       0 => 'C:\\xampp\\htdocs\\simple-invoice-master\\templates\\clientes.tpl',
-      1 => 1607983386,
+      1 => 1607986291,
       2 => 'file',
     ),
   ),
@@ -20,9 +20,10 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
     'file:head.tpl' => 1,
     'file:navbar.tpl' => 1,
+    'file:footer.tpl' => 1,
   ),
 ),false)) {
-function content_5fd7e1aeae3ac8_66984936 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5fd7ec8a00b879_32929666 (Smarty_Internal_Template $_smarty_tpl) {
 ?>	<?php $_smarty_tpl->_subTemplateRender("file:head.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 ?>
 		<?php $_smarty_tpl->_subTemplateRender("file:navbar.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
@@ -66,25 +67,13 @@ include("modal/registro_clientes.php");
 			</form>
 				<div id="resultados"></div><!-- Carga los datos ajax -->
 				<div class='outer_div'></div><!-- Carga los datos ajax -->
-			
-		
-	
-			
-			
-			
+					
   </div>
 </div>
 		 
 	</div>
-	<hr>
-	<?php echo '<?php
-	';?>
-include("footer.php");
-	<?php echo '?>';?>
-
-	<?php echo '<script'; ?>
- type="text/javascript" src="js/clientes.js"><?php echo '</script'; ?>
->
+		<?php $_smarty_tpl->_subTemplateRender("file:footer.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
+?>
   </body>
 </html>
 <?php }
