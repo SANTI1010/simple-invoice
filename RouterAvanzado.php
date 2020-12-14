@@ -1,6 +1,7 @@
 <?php 
 	require_once('Controller/ControllerUser.php');
 	require_once('Controller/ControllerFacturas.php');
+	require_once('Controller/ControllerProductos.php');
 
 	require_once('RouterClass.php');
 
@@ -18,9 +19,14 @@
 	$r->addRoute("verifyUser","POST","ControllerUser","VerifyUser");
 
 
-	//Home
+	//Factura
 	$r->addRoute("facturas","GET","ControllerFacturas","Facturas");
+	$r->addRoute("newFactura","GET","ControllerFacturas","NewFactura");
 
+
+	//Productos
+	$r->addRoute("productos","GET","ControllerProductos","Productos");
+	$r->addRoute("newProducto","GET","ControllerProductos","NewProducto");
 
 
 	//volver

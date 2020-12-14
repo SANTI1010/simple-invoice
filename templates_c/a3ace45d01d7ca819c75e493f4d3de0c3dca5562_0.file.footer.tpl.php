@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.34-dev-7, created on 2020-12-14 19:45:45
+/* Smarty version 3.1.34-dev-7, created on 2020-12-14 21:37:39
   from 'C:\xampp\htdocs\simple-invoice-master\templates\footer.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.34-dev-7',
-  'unifunc' => 'content_5fd7b2d9149290_11180732',
+  'unifunc' => 'content_5fd7cd13a2c229_30570153',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'a3ace45d01d7ca819c75e493f4d3de0c3dca5562' => 
     array (
       0 => 'C:\\xampp\\htdocs\\simple-invoice-master\\templates\\footer.tpl',
-      1 => 1607971543,
+      1 => 1607977999,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5fd7b2d9149290_11180732 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5fd7cd13a2c229_30570153 (Smarty_Internal_Template $_smarty_tpl) {
 ?><div class="navbar navbar-default navbar-fixed-bottom">
     <div class="container">
       <p class="navbar-text pull-left">&copy  - Santiago Cabrera.
@@ -28,6 +28,7 @@ function content_5fd7b2d9149290_11180732 (Smarty_Internal_Template $_smarty_tpl)
       </p>
    </div>
 </div>
+
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <?php echo '<script'; ?>
  src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"><?php echo '</script'; ?>

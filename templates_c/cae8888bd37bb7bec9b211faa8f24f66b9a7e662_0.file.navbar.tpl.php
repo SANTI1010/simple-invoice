@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.34-dev-7, created on 2020-12-14 19:34:31
+/* Smarty version 3.1.34-dev-7, created on 2020-12-14 22:08:43
   from 'C:\xampp\htdocs\simple-invoice-master\templates\navbar.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.34-dev-7',
-  'unifunc' => 'content_5fd7b037f00364_33245729',
+  'unifunc' => 'content_5fd7d45bd8a470_30336372',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'cae8888bd37bb7bec9b211faa8f24f66b9a7e662' => 
     array (
       0 => 'C:\\xampp\\htdocs\\simple-invoice-master\\templates\\navbar.tpl',
-      1 => 1607970870,
+      1 => 1607980122,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5fd7b037f00364_33245729 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5fd7d45bd8a470_30336372 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 <nav class="navbar navbar-default ">
   <div class="container-fluid">
@@ -40,16 +40,16 @@ function content_5fd7b037f00364_33245729 (Smarty_Internal_Template $_smarty_tpl)
       <ul class="nav navbar-nav">
         <li class="<?php echo '<?php ';?>
 echo $active_facturas;<?php echo '?>';?>
-"><a href="facturas.php"><i class='glyphicon glyphicon-list-alt'></i> Facturas <span class="sr-only">(current)</span></a></li>
+"><a href="facturas"><i class='glyphicon glyphicon-list-alt'></i> Facturas <span class="sr-only">(current)</span></a></li>
         <li class="<?php echo '<?php ';?>
 echo $active_productos;<?php echo '?>';?>
-"><a href="productos.php"><i class='glyphicon glyphicon-barcode'></i> Productos</a></li>
+"><a href="productos"><i class='glyphicon glyphicon-barcode'></i> Productos</a></li>
 		<li class="<?php echo '<?php ';?>
 echo $active_clientes;<?php echo '?>';?>
-"><a href="clientes.php"><i class='glyphicon glyphicon-user'></i> Clientes</a></li>
+"><a href="clientes"><i class='glyphicon glyphicon-user'></i> Clientes</a></li>
 		<li class="<?php echo '<?php ';?>
 echo $active_usuarios;<?php echo '?>';?>
-"><a href="usuarios.php"><i  class='glyphicon glyphicon-lock'></i> Usuarios</a></li>
+"><a href="usuarios"><i  class='glyphicon glyphicon-lock'></i> Usuarios</a></li>
 	
     <!-- Deberias preguntar si el perfil esta activo -->
 

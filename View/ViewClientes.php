@@ -3,18 +3,18 @@
 //El smarty va en la view
 require_once "./libs/smarty/Smarty.class.php";
 
-class ViewFacturas {	
+class ViewClientes {	
 	function __construct() {		
 	}
 
-	function ShowFacturas(){
+	function ShowClientes(){
 		$smarty = new Smarty();
-		$smarty->display('templates/facturas.tpl'); 
+		$smarty->display('templates/clientes.tpl'); 
 	}
 
-	function newFactura(){
+	function newCliente(){
 		$smarty = new Smarty();
-		$smarty->display('templates/newFactura.tpl'); 
+		$smarty->display('templates/newCliente.tpl'); 
 	}
 }
 

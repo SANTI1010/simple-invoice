@@ -1,33 +1,33 @@
 <?php
 
-require_once "./View/ViewFacturas.php";
+require_once "./View/ViewClientes.php";
 //require_once "./Model/ModelFacturas.php";
 require_once "./Helpers/Helper.php";
 
 
 
-class ControllerFacturas {
+class ControllerProductos {
 
     private $view;
     private $model;
     private $authHelper;
 
     public function __construct() {
-        $this->view = new ViewFacturas();
+        $this->view = new ViewClientes();
         $this->authHelper = new Helper();
       //  $this->model = new ModelFacturas();
        
     }
 
 
-    public function Facturas() {
+    public function Clientes() {
         $this->authHelper->checkLoggedIn();
-        $this->view->ShowFacturas();
+        $this->view->ShowClientes();
     }
 
-    public function NewFactura() {
+    public function NewCliente() {
         $this->authHelper->checkLoggedIn();  
-        $this->view->newFactura(); 
+        $this->view->newCliente(); 
     }
 
 }
