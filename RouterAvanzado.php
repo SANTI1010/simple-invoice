@@ -2,6 +2,9 @@
 	require_once('Controller/ControllerUser.php');
 	require_once('Controller/ControllerFacturas.php');
 	require_once('Controller/ControllerProductos.php');
+	require_once('Controller/ControllerClientes.php');
+	require_once('Controller/ControllerPerfil.php');
+
 
 	require_once('RouterClass.php');
 
@@ -27,6 +30,17 @@
 	//Productos
 	$r->addRoute("productos","GET","ControllerProductos","Productos");
 	$r->addRoute("newProducto","GET","ControllerProductos","NewProducto");
+
+	//Clientes
+	$r->addRoute("clientes","GET","ControllerClientes","Clientes");
+	$r->addRoute("newCliente","GET","ControllerClientes","NewCliente");
+
+	//Usuarios
+	$r->addRoute("usuarios","GET","ControllerUser","Usuarios");
+
+	//Perfil
+	$r->addRoute("perfil","GET","ControllerPerfil","Perfil");	
+
 
 
 	//volver

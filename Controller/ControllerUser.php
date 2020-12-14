@@ -48,6 +48,11 @@ class ControllerUser {
         }
     }    
 
+    public function Usuarios() {
+        $this->authHelper->checkLoggedIn();
+        $this->view->ShowUsuarios();
+    }
+
 
     /**
      * log in with post data

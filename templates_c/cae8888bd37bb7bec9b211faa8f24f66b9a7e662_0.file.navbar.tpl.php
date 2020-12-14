@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.34-dev-7, created on 2020-12-14 22:08:43
+/* Smarty version 3.1.34-dev-7, created on 2020-12-14 23:22:44
   from 'C:\xampp\htdocs\simple-invoice-master\templates\navbar.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.34-dev-7',
-  'unifunc' => 'content_5fd7d45bd8a470_30336372',
+  'unifunc' => 'content_5fd7e5b4c04693_16879184',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'cae8888bd37bb7bec9b211faa8f24f66b9a7e662' => 
     array (
       0 => 'C:\\xampp\\htdocs\\simple-invoice-master\\templates\\navbar.tpl',
-      1 => 1607980122,
+      1 => 1607984323,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5fd7d45bd8a470_30336372 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5fd7e5b4c04693_16879184 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 <nav class="navbar navbar-default ">
   <div class="container-fluid">
@@ -53,7 +53,7 @@ echo $active_usuarios;<?php echo '?>';?>
 	
     <!-- Deberias preguntar si el perfil esta activo -->
 
-  	<li><a href="perfil.php"><i  class='glyphicon glyphicon-cog'></i> Configuración</a></li>
+  	<li><a href="perfil"><i  class='glyphicon glyphicon-cog'></i> Configuración</a></li>
        </ul>
       <ul class="nav navbar-nav navbar-right">
         <li><a href="http://obedalvarado.pw/contacto/" target='_blank'><i class='glyphicon glyphicon-envelope'></i> Soporte</a></li>

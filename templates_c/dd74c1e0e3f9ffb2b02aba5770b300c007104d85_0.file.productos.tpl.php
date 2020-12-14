@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.34-dev-7, created on 2020-12-14 22:15:43
+/* Smarty version 3.1.34-dev-7, created on 2020-12-14 23:24:43
   from 'C:\xampp\htdocs\simple-invoice-master\templates\productos.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.34-dev-7',
-  'unifunc' => 'content_5fd7d5ff7f8815_69094344',
+  'unifunc' => 'content_5fd7e62b13daf7_05635829',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'dd74c1e0e3f9ffb2b02aba5770b300c007104d85' => 
     array (
       0 => 'C:\\xampp\\htdocs\\simple-invoice-master\\templates\\productos.tpl',
-      1 => 1607980539,
+      1 => 1607984666,
       2 => 'file',
     ),
   ),
@@ -22,7 +22,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:navbar.tpl' => 1,
   ),
 ),false)) {
-function content_5fd7d5ff7f8815_69094344 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5fd7e62b13daf7_05635829 (Smarty_Internal_Template $_smarty_tpl) {
 ?>	<?php $_smarty_tpl->_subTemplateRender("file:head.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 ?>
 	<?php $_smarty_tpl->_subTemplateRender("file:navbar.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
@@ -66,16 +66,9 @@ include("modal/registro_productos.php");
 							
 						</div>
 				
-				
-				
 			</form>
 				<div id="resultados"></div><!-- Carga los datos ajax -->
 				<div class='outer_div'></div><!-- Carga los datos ajax -->
-			
-		
-	
-			
-			
 			
   </div>
 </div>

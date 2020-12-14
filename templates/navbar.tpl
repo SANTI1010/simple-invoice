@@ -22,7 +22,7 @@
 	
     <!-- Deberias preguntar si el perfil esta activo -->
 
-  	<li><a href="perfil.php"><i  class='glyphicon glyphicon-cog'></i> Configuración</a></li>
+  	<li><a href="perfil"><i  class='glyphicon glyphicon-cog'></i> Configuración</a></li>
        </ul>
       <ul class="nav navbar-nav navbar-right">
         <li><a href="http://obedalvarado.pw/contacto/" target='_blank'><i class='glyphicon glyphicon-envelope'></i> Soporte</a></li>

@@ -1,13 +1,6 @@
 
-	<!DOCTYPE html>
-<html lang="en">
 <title>Facturas</title>
-  <head>
 	{include file="head.tpl"}
-
-  </head>
-  <body>
-
 	{include file="navbar.tpl"}
 
     <div class="container">

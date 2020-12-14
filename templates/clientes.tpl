@@ -1,35 +1,6 @@
-<?php
-	/*-------------------------
-	Autor: Obed Alvarado
-	Web: obedalvarado.pw
-	Mail: info@obedalvarado.pw
-	---------------------------*/
-	session_start();
-	if (!isset($_SESSION['user_login_status']) AND $_SESSION['user_login_status'] != 1) {
-        header("location: login.php");
-		exit;
-        }
-	
-	/* Connect To Database*/
-	require_once ("config/db.php");//Contiene las variables de configuracion para conectar a la base de datos
-	require_once ("config/conexion.php");//Contiene funcion que conecta a la base de datos
-	
-	$active_facturas="";
-	$active_productos="";
-	$active_clientes="active";
-	$active_usuarios="";	
-	$title="Clientes | Simple Invoice";
-?>
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <?php include("head.php");?>
-  </head>
-  <body>
-	<?php
-	include("navbar.php");
-	?>
-	
+	{include file="head.tpl"}
+		{include file="navbar.tpl"}
+
     <div class="container">
 	<div class="panel panel-info">
 		<div class="panel-heading">

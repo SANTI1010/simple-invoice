@@ -1,33 +1,31 @@
 <?php
-	/*-------------------------
-	Autor: Obed Alvarado
-	Web: obedalvarado.pw
-	Mail: info@obedalvarado.pw
-	---------------------------*/
-	session_start();
-	if (!isset($_SESSION['user_login_status']) AND $_SESSION['user_login_status'] != 1) {
-        header("location: login.php");
-		exit;
-        }
+/* Smarty version 3.1.34-dev-7, created on 2020-12-14 23:18:07
+  from 'C:\xampp\htdocs\simple-invoice-master\templates\usuarios.tpl' */
 
-	/* Connect To Database*/
-	require_once ("config/db.php");//Contiene las variables de configuracion para conectar a la base de datos
-	require_once ("config/conexion.php");//Contiene funcion que conecta a la base de datos
-	$active_facturas="";
-	$active_productos="";
-	$active_clientes="";
-	$active_usuarios="active";	
-	$title="Usuarios | Simple Invoice";
+/* @var Smarty_Internal_Template $_smarty_tpl */
+if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
+  'version' => '3.1.34-dev-7',
+  'unifunc' => 'content_5fd7e49f2e10b5_51260204',
+  'has_nocache_code' => false,
+  'file_dependency' => 
+  array (
+    'e53ef30bf29b1efa845404e22e878d338da9588d' => 
+    array (
+      0 => 'C:\\xampp\\htdocs\\simple-invoice-master\\templates\\usuarios.tpl',
+      1 => 1607984281,
+      2 => 'file',
+    ),
+  ),
+  'includes' => 
+  array (
+    'file:head.tpl' => 1,
+    'file:navbar.tpl' => 1,
+  ),
+),false)) {
+function content_5fd7e49f2e10b5_51260204 (Smarty_Internal_Template $_smarty_tpl) {
+$_smarty_tpl->_subTemplateRender("file:head.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
+$_smarty_tpl->_subTemplateRender("file:navbar.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 ?>
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-	<?php include("head.php");?>
-  </head>
-  <body>
- 	<?php
-	include("navbar.php");
-	?> 
     <div class="container">
 		<div class="panel panel-info">
 		<div class="panel-heading">
@@ -37,11 +35,13 @@
 			<h4><i class='glyphicon glyphicon-search'></i> Buscar Usuarios</h4>
 		</div>			
 			<div class="panel-body">
-			<?php
-			include("modal/registro_usuarios.php");
+			<?php echo '<?php
+			';?>
+include("modal/registro_usuarios.php");
 			include("modal/editar_usuarios.php");
 			include("modal/cambiar_password.php");
-			?>
+			<?php echo '?>';?>
+
 			<form class="form-horizontal" role="form" id="datos_cotizacion">
 				
 						<div class="form-group row">
@@ -71,10 +71,14 @@
 
 	</div>
 	<hr>
-	<?php
-	include("footer.php");
-	?>
-	<script type="text/javascript" src="js/usuarios.js"></script>
+	<?php echo '<?php
+	';?>
+include("footer.php");
+	<?php echo '?>';?>
+
+	<?php echo '<script'; ?>
+ type="text/javascript" src="js/usuarios.js"><?php echo '</script'; ?>
+>
 
 	
 	
@@ -82,7 +86,8 @@
 
   </body>
 </html>
-<script>
+<?php echo '<script'; ?>
+>
 $( "#guardar_usuario" ).submit(function( event ) {
   $('#guardar_datos').attr("disabled", true);
   
@@ -159,4 +164,6 @@ $( "#editar_password" ).submit(function( event ) {
 			$("#user_email2").val(email);
 			
 		}
-</script>
+<?php echo '</script'; ?>
+><?php }
+}

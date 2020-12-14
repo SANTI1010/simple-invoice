@@ -1,33 +1,28 @@
 <?php
 
-require_once "./View/ViewClientes.php";
+require_once "./View/ViewPerfil.php";
 //require_once "./Model/ModelFacturas.php";
 require_once "./Helpers/Helper.php";
 
 
 
-class ControllerClientes {
+class ControllerPerfil {
 
     private $view;
     private $model;
     private $authHelper;
 
     public function __construct() {
-        $this->view = new ViewClientes();
+        $this->view = new ViewPerfil();
         $this->authHelper = new Helper();
       //  $this->model = new ModelFacturas();
        
     }
 
-
-    public function Clientes() {
+    public function Perfil() {
         $this->authHelper->checkLoggedIn();
-        $this->view->ShowClientes();
+        $this->view->ShowPerfil();
     }
 
-    public function NewCliente() {
-        $this->authHelper->checkLoggedIn();  
-        $this->view->newCliente(); 
-    }
 
 }
