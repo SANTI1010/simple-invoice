@@ -14,7 +14,7 @@ class ModelUser {
 	
 
 	function GetUser($user){
-		$sentencia = $this->db->prepare("SELECT * FROM users WHERE firstname=?");
+		$sentencia = $this->db->prepare("SELECT * FROM users WHERE user_name=?");
 		$sentencia->execute(array($user));
 		return $sentencia->fetch(PDO::FETCH_OBJ);//me lo trae en formato OBJETO
 	}

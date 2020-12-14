@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.34-dev-7, created on 2020-12-14 16:39:31
+/* Smarty version 3.1.34-dev-7, created on 2020-12-14 19:37:58
   from 'C:\xampp\htdocs\simple-invoice-master\templates\header.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.34-dev-7',
-  'unifunc' => 'content_5fd787335e5ef9_94854751',
+  'unifunc' => 'content_5fd7b106ed8850_22164851',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '290f4b245b1a0c36369587feef81ee3c87e865d8' => 
     array (
       0 => 'C:\\xampp\\htdocs\\simple-invoice-master\\templates\\header.tpl',
-      1 => 1607960358,
+      1 => 1607971062,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5fd787335e5ef9_94854751 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5fd7b106ed8850_22164851 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 <html lang="es">
 <head>

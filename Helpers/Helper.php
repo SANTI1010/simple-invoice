@@ -5,15 +5,15 @@ class Helper {
 	private $view;
 
 	public function __construct() {
-		$this->view = new UserView();
+		$this->view = new ViewUser();
 	}
 
 
 	public function Login($user) {
 		session_start();
-		$_SESSION["NOMBRE"] = $user->nombre;
-		$_SESSION["ID"] = $user->id_usuario;
-		$_SESSION["ROL"] = $user->rol;
+		$_SESSION["NOMBRE"] = $user->lastname;
+		$_SESSION["ID"] = $user->user_id;
+		$_SESSION["ROL"] = $user->user_name;
 		$_SESSION['LAST_ACTIVITY'] = time(); // actualiza el último instante de actividad
 	}
 

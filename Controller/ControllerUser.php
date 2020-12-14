@@ -2,7 +2,7 @@
 
 require_once "./View/ViewUser.php";
 require_once "./Model/ModelUser.php";
-//require_once "./Helpers/Helper.php";
+require_once "./Helpers/Helper.php";
 
 
 
@@ -15,7 +15,7 @@ class ControllerUser {
     public function __construct() {
         $this->view = new ViewUser();
         $this->model = new ModelUser();
-       
+        $this->authHelper = new Helper();     
     }
 
 
@@ -32,15 +32,12 @@ class ControllerUser {
             $user = $_POST['user_name'];
             $pass = $_POST['user_password'];
         }
-
         if(isset($user)){
             $userFromDB = $this->model->GetUser($user);
-            var_dump($user_fromDB);
-            die();
             if(isset($userFromDB) && $userFromDB){ //existe y es true.
-                if(password_verify($pass, $userFromDB->password)){
+                if(password_verify($pass, $userFromDB->user_password_hash)){
                     $this->authHelper->Login($userFromDB);
-                        header("Location:".BASE_URL."home");
+                        header("Location:".BASE_URL."facturas");
                 }else{
                     $this->view->ShowLogin("Contraseña incorrecta");
                 }

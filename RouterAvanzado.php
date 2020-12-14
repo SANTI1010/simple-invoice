@@ -1,5 +1,6 @@
 <?php 
 	require_once('Controller/ControllerUser.php');
+	require_once('Controller/ControllerFacturas.php');
 
 	require_once('RouterClass.php');
 
@@ -13,8 +14,14 @@
 	$r = new Router();
 
 	//Login
-	$r->addRoute("login","GET","ControllerUser","Login");
+	$r->addRoute("login","GET","ControllerUser","ShowLogin");
 	$r->addRoute("verifyUser","POST","ControllerUser","VerifyUser");
+
+
+	//Home
+	$r->addRoute("facturas","GET","ControllerFacturas","Facturas");
+
+
 
 	//volver
 	$r->addRoute("volver","GET","ProductsController","volver");

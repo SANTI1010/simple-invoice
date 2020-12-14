@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.34-dev-7, created on 2020-12-14 16:40:16
+/* Smarty version 3.1.34-dev-7, created on 2020-12-14 19:38:06
   from 'C:\xampp\htdocs\simple-invoice-master\templates\login.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.34-dev-7',
-  'unifunc' => 'content_5fd78760730527_94667215',
+  'unifunc' => 'content_5fd7b10e2b0d93_85151630',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'ba7a2fe20ea51360c0dd7c348ede31c9e3d7bb71' => 
     array (
       0 => 'C:\\xampp\\htdocs\\simple-invoice-master\\templates\\login.tpl',
-      1 => 1607960414,
+      1 => 1607971084,
       2 => 'file',
     ),
   ),
@@ -21,7 +21,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:header.tpl' => 1,
   ),
 ),false)) {
-function content_5fd78760730527_94667215 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5fd7b10e2b0d93_85151630 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_subTemplateRender("file:header.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 ?>
 
