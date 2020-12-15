@@ -1,39 +1,35 @@
 <?php
-/* Smarty version 3.1.34-dev-7, created on 2020-12-14 23:55:28
+/* Smarty version 3.1.34-dev-7, created on 2020-12-15 13:43:29
   from 'C:\xampp\htdocs\simple-invoice-master\templates\newFactura.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.34-dev-7',
-  'unifunc' => 'content_5fd7ed609c6672_50958886',
+  'unifunc' => 'content_5fd8af71687d70_81174624',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '4f99960f443a4c282fd778ee87caefd2c31c77cd' => 
     array (
       0 => 'C:\\xampp\\htdocs\\simple-invoice-master\\templates\\newFactura.tpl',
-      1 => 1607986526,
+      1 => 1608036207,
       2 => 'file',
     ),
   ),
   'includes' => 
   array (
-    'file:head.tpl' => 1,
+    'file:header.tpl' => 1,
     'file:navbar.tpl' => 1,
     'file:footer.tpl' => 1,
   ),
 ),false)) {
-function content_5fd7ed609c6672_50958886 (Smarty_Internal_Template $_smarty_tpl) {
-?>	<?php $_smarty_tpl->_subTemplateRender("file:head.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
+function content_5fd8af71687d70_81174624 (Smarty_Internal_Template $_smarty_tpl) {
+?>	<?php $_smarty_tpl->_subTemplateRender("file:header.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 ?>
 	<?php $_smarty_tpl->_subTemplateRender("file:navbar.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 ?>
 
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-  </head>
-  <body>
+
     <div class="container">
 	<div class="panel panel-info">
 		<div class="panel-heading">
@@ -146,7 +142,7 @@ echo date("d/m/Y");<?php echo '?>';?>
 	<?php $_smarty_tpl->_subTemplateRender("file:footer.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 ?>
 	
-	
+<!--	
 	<link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
     <?php echo '<script'; ?>
  src="//code.jquery.com/ui/1.11.4/jquery-ui.js"><?php echo '</script'; ?>
@@ -190,5 +186,5 @@ echo date("d/m/Y");<?php echo '?>';?>
 >
 
   </body>
-</html><?php }
+</html>--><?php }
 }

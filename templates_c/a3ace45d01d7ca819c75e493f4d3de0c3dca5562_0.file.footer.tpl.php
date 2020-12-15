@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.34-dev-7, created on 2020-12-14 23:46:03
+/* Smarty version 3.1.34-dev-7, created on 2020-12-15 13:44:45
   from 'C:\xampp\htdocs\simple-invoice-master\templates\footer.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.34-dev-7',
-  'unifunc' => 'content_5fd7eb2be52319_78029472',
+  'unifunc' => 'content_5fd8afbd193974_90129956',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'a3ace45d01d7ca819c75e493f4d3de0c3dca5562' => 
     array (
       0 => 'C:\\xampp\\htdocs\\simple-invoice-master\\templates\\footer.tpl',
-      1 => 1607985951,
+      1 => 1608036284,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5fd7eb2be52319_78029472 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5fd8afbd193974_90129956 (Smarty_Internal_Template $_smarty_tpl) {
 ?><div class="navbar navbar-default navbar-fixed-bottom">
     <div class="container">
       <p class="navbar-text pull-left">&copy  - Santiago Cabrera.
@@ -29,14 +29,29 @@ function content_5fd7eb2be52319_78029472 (Smarty_Internal_Template $_smarty_tpl)
    </div>
 </div>
 
-    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+
+ 
+<!--
+  <?php echo '<script'; ?>
+ type="text/javascript" src="js/bootstrap-filestyle.js"> <?php echo '</script'; ?>
+>
+  <?php echo '<script'; ?>
+ type="text/javascript" src="js/VentanaCentrada.js"><?php echo '</script'; ?>
+>
+  <?php echo '<script'; ?>
+ type="text/javascript" src="js/nueva_factura.js"><?php echo '</script'; ?>
+>
+-->   <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <?php echo '<script'; ?>
  src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"><?php echo '</script'; ?>
 >
-
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <!-- Latest compiled and minified JavaScript -->
-	<?php echo '<script'; ?>
+  <?php echo '<script'; ?>
  src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"><?php echo '</script'; ?>
-><?php }
+>
+  <?php echo '<script'; ?>
+ src="js/facturas.js"><?php echo '</script'; ?>
+>
+<?php }
 }

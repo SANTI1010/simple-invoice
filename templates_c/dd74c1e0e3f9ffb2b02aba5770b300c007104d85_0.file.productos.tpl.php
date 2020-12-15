@@ -1,32 +1,32 @@
 <?php
-/* Smarty version 3.1.34-dev-7, created on 2020-12-14 23:59:29
+/* Smarty version 3.1.34-dev-7, created on 2020-12-15 13:17:00
   from 'C:\xampp\htdocs\simple-invoice-master\templates\productos.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.34-dev-7',
-  'unifunc' => 'content_5fd7ee5159f009_56638036',
+  'unifunc' => 'content_5fd8a93c9b3c26_20893832',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'dd74c1e0e3f9ffb2b02aba5770b300c007104d85' => 
     array (
       0 => 'C:\\xampp\\htdocs\\simple-invoice-master\\templates\\productos.tpl',
-      1 => 1607986768,
+      1 => 1608034619,
       2 => 'file',
     ),
   ),
   'includes' => 
   array (
-    'file:head.tpl' => 1,
+    'file:header.tpl' => 1,
     'file:navbar.tpl' => 1,
     'file:../modal/registro_productos.php' => 1,
     'file:../modal/editar_productos.php' => 1,
     'file:footer.tpl' => 1,
   ),
 ),false)) {
-function content_5fd7ee5159f009_56638036 (Smarty_Internal_Template $_smarty_tpl) {
-?>	<?php $_smarty_tpl->_subTemplateRender("file:head.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
+function content_5fd8a93c9b3c26_20893832 (Smarty_Internal_Template $_smarty_tpl) {
+?>	<?php $_smarty_tpl->_subTemplateRender("file:header.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 ?>
 	<?php $_smarty_tpl->_subTemplateRender("file:navbar.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 ?>
@@ -74,10 +74,10 @@ function content_5fd7ee5159f009_56638036 (Smarty_Internal_Template $_smarty_tpl)
 	</div>
   <?php $_smarty_tpl->_subTemplateRender("file:footer.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 ?> 	
-  </body>
- 
-</html>
-<?php echo '<script'; ?>
+  <?php echo '<script'; ?>
+ type="text/javascript" src="js/productos.js"><?php echo '</script'; ?>
+>
+<!--<?php echo '<script'; ?>
 >
 $( "#guardar_producto" ).submit(function( event ) {
   $('#guardar_datos').attr("disabled", true);
@@ -130,5 +130,5 @@ $( "#editar_producto" ).submit(function( event ) {
 			$("#mod_precio").val(precio_producto);
 		}
 <?php echo '</script'; ?>
-><?php }
+>--><?php }
 }

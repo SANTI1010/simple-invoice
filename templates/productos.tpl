@@ -1,4 +1,4 @@
-	{include file="head.tpl"}
+	{include file="header.tpl"}
 	{include file="navbar.tpl"}
 
   <body>
@@ -41,10 +41,8 @@
 		 
 	</div>
   {include file="footer.tpl"} 	
-  </body>
- 
-</html>
-<script>
+  <script type="text/javascript" src="js/productos.js"></script>
+<!--<script>
 $( "#guardar_producto" ).submit(function( event ) {
   $('#guardar_datos').attr("disabled", true);
   
@@ -95,4 +93,4 @@ $( "#editar_producto" ).submit(function( event ) {
 			$("#mod_nombre").val(nombre_producto);
 			$("#mod_precio").val(precio_producto);
 		}
-</script>
+</script>-->

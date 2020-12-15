@@ -1,30 +1,30 @@
 <?php
-/* Smarty version 3.1.34-dev-7, created on 2020-12-14 23:52:38
+/* Smarty version 3.1.34-dev-7, created on 2020-12-15 13:41:45
   from 'C:\xampp\htdocs\simple-invoice-master\templates\usuarios.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.34-dev-7',
-  'unifunc' => 'content_5fd7ecb6313072_29258809',
+  'unifunc' => 'content_5fd8af0988a3f4_66124003',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'e53ef30bf29b1efa845404e22e878d338da9588d' => 
     array (
       0 => 'C:\\xampp\\htdocs\\simple-invoice-master\\templates\\usuarios.tpl',
-      1 => 1607986346,
+      1 => 1608034663,
       2 => 'file',
     ),
   ),
   'includes' => 
   array (
-    'file:head.tpl' => 1,
+    'file:header.tpl' => 1,
     'file:navbar.tpl' => 1,
     'file:footer.tpl' => 1,
   ),
 ),false)) {
-function content_5fd7ecb6313072_29258809 (Smarty_Internal_Template $_smarty_tpl) {
-$_smarty_tpl->_subTemplateRender("file:head.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
+function content_5fd8af0988a3f4_66124003 (Smarty_Internal_Template $_smarty_tpl) {
+$_smarty_tpl->_subTemplateRender("file:header.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 $_smarty_tpl->_subTemplateRender("file:navbar.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 ?>
     <div class="container">
@@ -75,8 +75,10 @@ include("modal/registro_usuarios.php");
 	<?php $_smarty_tpl->_subTemplateRender("file:footer.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 ?>
 	
-  </body>
-</html>
+  <?php echo '<script'; ?>
+ type="text/javascript" src="js/usuarios.js"><?php echo '</script'; ?>
+>
+<!--
 <?php echo '<script'; ?>
 >
 $( "#guardar_usuario" ).submit(function( event ) {
@@ -156,5 +158,5 @@ $( "#editar_password" ).submit(function( event ) {
 			
 		}
 <?php echo '</script'; ?>
-><?php }
+>--><?php }
 }

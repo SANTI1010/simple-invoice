@@ -1,30 +1,30 @@
 <?php
-/* Smarty version 3.1.34-dev-7, created on 2020-12-14 23:51:54
+/* Smarty version 3.1.34-dev-7, created on 2020-12-15 13:17:17
   from 'C:\xampp\htdocs\simple-invoice-master\templates\clientes.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.34-dev-7',
-  'unifunc' => 'content_5fd7ec8a00b879_32929666',
+  'unifunc' => 'content_5fd8a94d6f0941_96197268',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'd0de9a0fdeee0b9ec4c0fe6ed1ac1051f37a9188' => 
     array (
       0 => 'C:\\xampp\\htdocs\\simple-invoice-master\\templates\\clientes.tpl',
-      1 => 1607986291,
+      1 => 1608034636,
       2 => 'file',
     ),
   ),
   'includes' => 
   array (
-    'file:head.tpl' => 1,
+    'file:header.tpl' => 1,
     'file:navbar.tpl' => 1,
     'file:footer.tpl' => 1,
   ),
 ),false)) {
-function content_5fd7ec8a00b879_32929666 (Smarty_Internal_Template $_smarty_tpl) {
-?>	<?php $_smarty_tpl->_subTemplateRender("file:head.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
+function content_5fd8a94d6f0941_96197268 (Smarty_Internal_Template $_smarty_tpl) {
+?>	<?php $_smarty_tpl->_subTemplateRender("file:header.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 ?>
 		<?php $_smarty_tpl->_subTemplateRender("file:navbar.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 ?>
@@ -74,7 +74,7 @@ include("modal/registro_clientes.php");
 	</div>
 		<?php $_smarty_tpl->_subTemplateRender("file:footer.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 ?>
-  </body>
-</html>
-<?php }
+   <?php echo '<script'; ?>
+ type="text/javascript" src="js/clientes.js"><?php echo '</script'; ?>
+><?php }
 }

@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.34-dev-7, created on 2020-12-15 00:00:56
+/* Smarty version 3.1.34-dev-7, created on 2020-12-15 02:28:49
   from 'C:\xampp\htdocs\simple-invoice-master\modal\editar_productos.php' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.34-dev-7',
-  'unifunc' => 'content_5fd7eea86bffd8_62263813',
+  'unifunc' => 'content_5fd81151252564_20706643',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '85198b73dbce542ebc74842175c1933d87536c89' => 
     array (
       0 => 'C:\\xampp\\htdocs\\simple-invoice-master\\modal\\editar_productos.php',
-      1 => 1607986855,
+      1 => 1607986887,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5fd7eea86bffd8_62263813 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5fd81151252564_20706643 (Smarty_Internal_Template $_smarty_tpl) {
 ?>	<?php echo '<?php
 		';?>
 if (isset($con))

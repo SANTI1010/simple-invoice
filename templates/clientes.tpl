@@ -1,4 +1,4 @@
-	{include file="head.tpl"}
+	{include file="header.tpl"}
 		{include file="navbar.tpl"}
 
     <div class="container">
@@ -43,5 +43,4 @@
 		 
 	</div>
 		{include file="footer.tpl"}
-  </body>
-</html>
+   <script type="text/javascript" src="js/clientes.js"></script>

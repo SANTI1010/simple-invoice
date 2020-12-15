@@ -1,11 +1,7 @@
-	{include file="head.tpl"}
+	{include file="header.tpl"}
 	{include file="navbar.tpl"}
 
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-  </head>
-  <body>
+
     <div class="container">
 	<div class="panel panel-info">
 		<div class="panel-heading">
@@ -103,7 +99,7 @@
 	
 	{include file="footer.tpl"}
 	
-	
+<!--	
 	<link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
     <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
 	<script>
@@ -143,4 +139,4 @@
 	</script>
 
   </body>
-</html>
+</html>-->

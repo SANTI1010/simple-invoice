@@ -1,4 +1,4 @@
-{include file="head.tpl"}
+{include file="header.tpl"}
 {include file="navbar.tpl"}
     <div class="container">
 		<div class="panel panel-info">
@@ -45,8 +45,8 @@
 
 	{include file="footer.tpl"}
 	
-  </body>
-</html>
+  <script type="text/javascript" src="js/usuarios.js"></script>
+<!--
 <script>
 $( "#guardar_usuario" ).submit(function( event ) {
   $('#guardar_datos').attr("disabled", true);
@@ -124,4 +124,4 @@ $( "#editar_password" ).submit(function( event ) {
 			$("#user_email2").val(email);
 			
 		}
-</script>
+</script>-->

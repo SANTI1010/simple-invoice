@@ -1,5 +1,5 @@
 <title>Facturas</title>
-	{include file="head.tpl"}
+	{include file="header.tpl"}
 	{include file="navbar.tpl"}
 
     <div class="container">
@@ -19,28 +19,18 @@
 								<input type="text" class="form-control" id="q" placeholder="Nombre del cliente o # de factura" onkeyup='load(1);'>
 							</div>
 							
-							
-							
 							<div class="col-md-3">
 								<button type="button" class="btn btn-default" onclick='load(1);'>
 									<span class="glyphicon glyphicon-search" ></span> Buscar</button>
 								<span id="loader"></span>
 							</div>
-							
 						</div>				
 			</form>
 				<div id="resultados"></div><!-- Carga los datos ajax -->
 				<div class='outer_div'></div><!-- Carga los datos ajax -->
 			</div>
 		</div>	
-		
 	</div>
-	<hr>
-	
-	{include file="footer.tpl"}
-	  	
 
-  </body>
-
-
-</html>
+ 
+{include file="footer.tpl"}
