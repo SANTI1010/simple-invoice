@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.34-dev-7, created on 2020-12-15 13:44:45
+/* Smarty version 3.1.34-dev-7, created on 2020-12-15 16:53:41
   from 'C:\xampp\htdocs\simple-invoice-master\templates\footer.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.34-dev-7',
-  'unifunc' => 'content_5fd8afbd193974_90129956',
+  'unifunc' => 'content_5fd8dc05b5c544_72109815',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'a3ace45d01d7ca819c75e493f4d3de0c3dca5562' => 
     array (
       0 => 'C:\\xampp\\htdocs\\simple-invoice-master\\templates\\footer.tpl',
-      1 => 1608036284,
+      1 => 1608047619,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5fd8afbd193974_90129956 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5fd8dc05b5c544_72109815 (Smarty_Internal_Template $_smarty_tpl) {
 ?><div class="navbar navbar-default navbar-fixed-bottom">
     <div class="container">
       <p class="navbar-text pull-left">&copy  - Santiago Cabrera.
@@ -53,5 +53,6 @@ function content_5fd8afbd193974_90129956 (Smarty_Internal_Template $_smarty_tpl)
   <?php echo '<script'; ?>
  src="js/facturas.js"><?php echo '</script'; ?>
 >
-<?php }
+</body>
+</html><?php }
 }

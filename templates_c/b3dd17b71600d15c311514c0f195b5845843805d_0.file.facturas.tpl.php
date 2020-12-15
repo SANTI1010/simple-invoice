@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.34-dev-7, created on 2020-12-15 13:44:27
+/* Smarty version 3.1.34-dev-7, created on 2020-12-15 16:36:44
   from 'C:\xampp\htdocs\simple-invoice-master\templates\facturas.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.34-dev-7',
-  'unifunc' => 'content_5fd8afabd110d9_41510113',
+  'unifunc' => 'content_5fd8d80c7ec466_22612121',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'b3dd17b71600d15c311514c0f195b5845843805d' => 
     array (
       0 => 'C:\\xampp\\htdocs\\simple-invoice-master\\templates\\facturas.tpl',
-      1 => 1608036266,
+      1 => 1608046599,
       2 => 'file',
     ),
   ),
@@ -23,21 +23,22 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:footer.tpl' => 1,
   ),
 ),false)) {
-function content_5fd8afabd110d9_41510113 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5fd8d80c7ec466_22612121 (Smarty_Internal_Template $_smarty_tpl) {
 ?><title>Facturas</title>
 	<?php $_smarty_tpl->_subTemplateRender("file:header.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 ?>
 	<?php $_smarty_tpl->_subTemplateRender("file:navbar.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 ?>
 
+
     <div class="container">
 		<div class="panel panel-info">
-		<div class="panel-heading">
-		    <div class="btn-group pull-right">
-				<a  href="newFactura" class="btn btn-info"><span class="glyphicon glyphicon-plus" ></span> Nueva Factura</a>
+			<div class="panel-heading">
+			    <div class="btn-group pull-right">
+					<a  href="newFactura" class="btn btn-info"><span class="glyphicon glyphicon-plus" ></span> Nueva Factura</a>
+				</div>
+				<h4><i class='glyphicon glyphicon-search'></i> Buscar Facturas</h4>
 			</div>
-			<h4><i class='glyphicon glyphicon-search'></i> Buscar Facturas</h4>
-		</div>
 			<div class="panel-body">
 				<form class="form-horizontal" role="form" id="datos_cotizacion">
 				
@@ -54,13 +55,78 @@ function content_5fd8afabd110d9_41510113 (Smarty_Internal_Template $_smarty_tpl)
 							</div>
 						</div>				
 			</form>
-				<div id="resultados"></div><!-- Carga los datos ajax -->
-				<div class='outer_div'></div><!-- Carga los datos ajax -->
+
+			<table class="table">
+				<tr  class="info">
+					<th>#</th>
+					<th>Fecha</th>
+					<th>Cliente</th>
+					<th>Vendedor</th>
+					<th>Estado</th>
+					<th class='text-right'>Total</th>
+					<th class='text-right'>Acciones</th>
+				</tr>
+
+				
+            <ul class="list-group">
+            	<div class="table-responsive">
+                <?php
+$_from = $_smarty_tpl->smarty->ext->_foreach->init($_smarty_tpl, $_smarty_tpl->tpl_vars['facturas']->value, 'factura');
+$_smarty_tpl->tpl_vars['factura']->do_else = true;
+if ($_from !== null) foreach ($_from as $_smarty_tpl->tpl_vars['factura']->value) {
+$_smarty_tpl->tpl_vars['factura']->do_else = false;
+?>
+                <tr>
+					<td><?php echo $_smarty_tpl->tpl_vars['factura']->value->numero_factura;?>
+</td>
+					<td><?php echo $_smarty_tpl->tpl_vars['factura']->value->fecha_factura;?>
+</td>
+					<td>
+						<a href="#" data-toggle="tooltip" data-placement="top" title="<i class='glyphicon glyphicon-phone'></i> <?php echo $_smarty_tpl->tpl_vars['factura']->value->telefono_cliente;?>
+<br><i class='glyphicon glyphicon-envelope'></i>  <?php echo $_smarty_tpl->tpl_vars['factura']->value->email_cliente;?>
+" ><?php echo $_smarty_tpl->tpl_vars['factura']->value->nombre_cliente;?>
+</a>
+					</td>
+					<td><?php echo $_smarty_tpl->tpl_vars['factura']->value->firstname;?>
+</td>
+					<td>
+
+						<span class="label <?php if ($_smarty_tpl->tpl_vars['factura']->value->estado_factura == 1) {?> label-success <?php } else { ?> label-warning <?php }?>>">
+							<?php if ($_smarty_tpl->tpl_vars['factura']->value->estado_factura == 1) {?> Pagada <?php } else { ?> Pendiente <?php }?>
+						</span>
+					</td>
+					<td class='text-right'><?php echo $_smarty_tpl->tpl_vars['factura']->value->total_venta;?>
+</td>					
+					<td class="text-right">
+						<a href="editar_factura.php?id_factura=<?php echo '<?php ';?>
+echo $id_factura;<?php echo '?>';?>
+" class='btn btn-default' title='Editar factura' >
+							<i class="glyphicon glyphicon-edit"></i>
+						</a> 
+						<a href="#" class='btn btn-default' title='Descargar factura' onclick="imprimir_factura('<?php echo '<?php ';?>
+echo $id_factura;<?php echo '?>';?>
+');">
+							<i class="glyphicon glyphicon-download"></i>
+						</a> 
+						<a href="#" class='btn btn-default' title='Borrar factura' onclick="eliminar('<?php echo '<?php ';?>
+echo $numero_factura; <?php echo '?>';?>
+')">
+							<i class="glyphicon glyphicon-trash"></i>
+						</a>
+					</td>
+						
+				</tr>
+                <?php
+}
+$_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
+            </ul>
+            </table>
+        </div>
+				<!-- Carga los datos ajax <div id="resultados"></div> -->
+				<!--<div class='outer_div'></div> Carga los datos ajax -->
 			</div>
 		</div>	
-	</div>
-
- 
+	</div> 
 <?php $_smarty_tpl->_subTemplateRender("file:footer.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 }
 }

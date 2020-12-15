@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.34-dev-7, created on 2020-12-15 13:43:29
+/* Smarty version 3.1.34-dev-7, created on 2020-12-15 16:52:07
   from 'C:\xampp\htdocs\simple-invoice-master\templates\newFactura.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.34-dev-7',
-  'unifunc' => 'content_5fd8af71687d70_81174624',
+  'unifunc' => 'content_5fd8dba7d2fa21_86527797',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '4f99960f443a4c282fd778ee87caefd2c31c77cd' => 
     array (
       0 => 'C:\\xampp\\htdocs\\simple-invoice-master\\templates\\newFactura.tpl',
-      1 => 1608036207,
+      1 => 1608047457,
       2 => 'file',
     ),
   ),
@@ -20,15 +20,17 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
     'file:header.tpl' => 1,
     'file:navbar.tpl' => 1,
+    'file:modal/buscar_productos.tpl' => 1,
+    'file:modal/registro_clientes.php' => 1,
+    'file:modal/registro_productos.php' => 1,
     'file:footer.tpl' => 1,
   ),
 ),false)) {
-function content_5fd8af71687d70_81174624 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5fd8dba7d2fa21_86527797 (Smarty_Internal_Template $_smarty_tpl) {
 ?>	<?php $_smarty_tpl->_subTemplateRender("file:header.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 ?>
 	<?php $_smarty_tpl->_subTemplateRender("file:navbar.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 ?>
-
 
     <div class="container">
 	<div class="panel panel-info">
@@ -36,12 +38,12 @@ function content_5fd8af71687d70_81174624 (Smarty_Internal_Template $_smarty_tpl)
 			<h4><i class='glyphicon glyphicon-edit'></i> Nueva Factura</h4>
 		</div>
 		<div class="panel-body">
-		<?php echo '<?php 
-			';?>
-include("modal/buscar_productos.php");
-			include("modal/registro_clientes.php");
-			include("modal/registro_productos.php");
-		<?php echo '?>';?>
+			<?php $_smarty_tpl->_subTemplateRender("file:modal/buscar_productos.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
+?>
+			<?php $_smarty_tpl->_subTemplateRender("file:modal/registro_clientes.php", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
+?>
+			<?php $_smarty_tpl->_subTemplateRender("file:modal/registro_productos.php", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
+?>
 
 			<form class="form-horizontal" role="form" id="datos_factura">
 				<div class="form-group row">

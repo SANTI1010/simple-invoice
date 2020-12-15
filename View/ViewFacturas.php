@@ -7,8 +7,9 @@ class ViewFacturas {
 	function __construct() {		
 	}
 
-	function ShowFacturas(){
+	function ShowFacturas($facturas){
 		$smarty = new Smarty();
+		$smarty->assign('facturas', $facturas);
 		$smarty->display('templates/facturas.tpl'); 
 	}
 
