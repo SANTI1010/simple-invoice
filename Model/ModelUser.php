@@ -21,7 +21,7 @@ class ModelUser {
 
 
 		function getUsers(){
-		$sentencia = $this->db->prepare("SELECT * FROM usuarios");
+		$sentencia = $this->db->prepare("SELECT * FROM users");
 		$sentencia->execute();
 		return $sentencia->fetchAll(PDO::FETCH_OBJ);
 

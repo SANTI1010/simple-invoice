@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.34-dev-7, created on 2020-12-15 16:36:44
+/* Smarty version 3.1.34-dev-7, created on 2020-12-29 13:53:24
   from 'C:\xampp\htdocs\simple-invoice-master\templates\facturas.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.34-dev-7',
-  'unifunc' => 'content_5fd8d80c7ec466_22612121',
+  'unifunc' => 'content_5feb26c4cd8c69_27112716',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'b3dd17b71600d15c311514c0f195b5845843805d' => 
     array (
       0 => 'C:\\xampp\\htdocs\\simple-invoice-master\\templates\\facturas.tpl',
-      1 => 1608046599,
+      1 => 1609245453,
       2 => 'file',
     ),
   ),
@@ -23,7 +23,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:footer.tpl' => 1,
   ),
 ),false)) {
-function content_5fd8d80c7ec466_22612121 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5feb26c4cd8c69_27112716 (Smarty_Internal_Template $_smarty_tpl) {
 ?><title>Facturas</title>
 	<?php $_smarty_tpl->_subTemplateRender("file:header.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 ?>
@@ -82,10 +82,13 @@ $_smarty_tpl->tpl_vars['factura']->do_else = false;
 					<td><?php echo $_smarty_tpl->tpl_vars['factura']->value->fecha_factura;?>
 </td>
 					<td>
-						<a href="#" data-toggle="tooltip" data-placement="top" title="<i class='glyphicon glyphicon-phone'></i> <?php echo $_smarty_tpl->tpl_vars['factura']->value->telefono_cliente;?>
-<br><i class='glyphicon glyphicon-envelope'></i>  <?php echo $_smarty_tpl->tpl_vars['factura']->value->email_cliente;?>
-" ><?php echo $_smarty_tpl->tpl_vars['factura']->value->nombre_cliente;?>
-</a>
+						<a href="#" data-toggle="tooltip" data-placement="top" 
+							title="<i class='glyphicon glyphicon-phone'><?php echo $_smarty_tpl->tpl_vars['factura']->value->telefono_cliente;?>
+</i> <br><i class='glyphicon glyphicon-envelope'><?php echo $_smarty_tpl->tpl_vars['factura']->value->email_cliente;?>
+</i>" >
+							<?php echo $_smarty_tpl->tpl_vars['factura']->value->nombre_cliente;?>
+
+						</a>
 					</td>
 					<td><?php echo $_smarty_tpl->tpl_vars['factura']->value->firstname;?>
 </td>
@@ -98,8 +101,7 @@ $_smarty_tpl->tpl_vars['factura']->do_else = false;
 					<td class='text-right'><?php echo $_smarty_tpl->tpl_vars['factura']->value->total_venta;?>
 </td>					
 					<td class="text-right">
-						<a href="editar_factura.php?id_factura=<?php echo '<?php ';?>
-echo $id_factura;<?php echo '?>';?>
+						<a href="editFactura/<?php echo $_smarty_tpl->tpl_vars['factura']->value->id_factura;?>
 " class='btn btn-default' title='Editar factura' >
 							<i class="glyphicon glyphicon-edit"></i>
 						</a> 
@@ -127,6 +129,7 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
 			</div>
 		</div>	
 	</div> 
+
 <?php $_smarty_tpl->_subTemplateRender("file:footer.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 }
 }

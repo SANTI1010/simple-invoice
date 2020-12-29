@@ -2,6 +2,7 @@
 
 require_once "./View/ViewFacturas.php";
 require_once "./Model/ModelFacturas.php";
+require_once "./Model/ModelUser.php";
 require_once "./Helpers/Helper.php";
 
 
@@ -10,12 +11,14 @@ class ControllerFacturas {
 
     private $view;
     private $model;
+    private $ModelUser;
     private $authHelper;
 
     public function __construct() {
         $this->view = new ViewFacturas();
         $this->authHelper = new Helper();
         $this->model = new ModelFacturas();
+        $this->modelUser = new ModelUser();
        
     }
 
@@ -33,7 +36,34 @@ class ControllerFacturas {
 
     public function NewFactura() {
         $this->authHelper->checkLoggedIn();  
-        $this->view->newFactura(); 
+        //vendedores son los usuarios
+        $vendedores = $this->modelUser->getUsers();
+        if(isset($vendedores)){
+            $this->view->newFactura($vendedores);     
+        } else {
+            $this->view->ShowError("Algo salio mal");   
+        }        
     }
+
+
+        public function EditFactura($params = null) {
+        $this->authHelper->checkLoggedIn();
+        $id_factura = $params[':ID'];
+        
+        if(isset($id_factura) && $id_factura != ""){
+            $factura = $this->model->getFacturaById($id_factura); 
+            if (isset($factura)) {
+                $this->view->editFactura($factura);
+            }
+        } else {
+           $this->view->showError("La factura no existe");
+
+        }     
+        
+    }
+
+
+
+
 
 }

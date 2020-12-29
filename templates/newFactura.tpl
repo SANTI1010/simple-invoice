@@ -1,5 +1,5 @@
-	{include file="header.tpl"}
-	{include file="navbar.tpl"}
+{include file="header.tpl"}
+{include file="navbar.tpl"}
 
     <div class="container">
 	<div class="panel panel-info">
@@ -31,26 +31,14 @@
 							<label for="empresa" class="col-md-1 control-label">Vendedor</label>
 							<div class="col-md-3">
 								<select class="form-control input-sm" id="id_vendedor">
-									<?php
-										$sql_vendedor=mysqli_query($con,"select * from users order by lastname");
-										while ($rw=mysqli_fetch_array($sql_vendedor)){
-											$id_vendedor=$rw["user_id"];
-											$nombre_vendedor=$rw["firstname"]." ".$rw["lastname"];
-											if ($id_vendedor==$_SESSION['user_id']){
-												$selected="selected";
-											} else {
-												$selected="";
-											}
-											?>
-											<option value="<?php echo $id_vendedor?>" <?php echo $selected;?>><?php echo $nombre_vendedor?></option>
-											<?php
-										}
-									?>
+									  {foreach from = $vendedores item=vendedor}
+                            			<option>{$vendedor->firstname}</option>
+                       				 {/foreach}
 								</select>
 							</div>
 							<label for="tel2" class="col-md-1 control-label">Fecha</label>
 							<div class="col-md-2">
-								<input type="text" class="form-control input-sm" id="fecha" value="<?php echo date("d/m/Y");?>" readonly>
+								<input type="text" class="form-control input-sm" id="fecha" value= '{$smarty.now|date_format:"%d/%m/%Y"}' readonly>
 							</div>
 							<label for="email" class="col-md-1 control-label">Pago</label>
 							<div class="col-md-3">
@@ -94,47 +82,13 @@
 			</div>	
 		 </div>
 	</div>
-	
+
+	  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+   
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+    <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+<!--  <script src="js/facturas.js"></script>-->
+	<script src="js/invoice.js"></script>
 	{include file="footer.tpl"}
 	
-<!--	
-	<link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
-    <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
-	<script>
-		$(function() {
-						$("#nombre_cliente").autocomplete({
-							source: "./ajax/autocomplete/clientes.php",
-							minLength: 2,
-							select: function(event, ui) {
-								event.preventDefault();
-								$('#id_cliente').val(ui.item.id_cliente);
-								$('#nombre_cliente').val(ui.item.nombre_cliente);
-								$('#tel1').val(ui.item.telefono_cliente);
-								$('#mail').val(ui.item.email_cliente);
-																
-								
-							 }
-						});
-						 
-						
-					});
-					
-	$("#nombre_cliente" ).on( "keydown", function( event ) {
-						if (event.keyCode== $.ui.keyCode.LEFT || event.keyCode== $.ui.keyCode.RIGHT || event.keyCode== $.ui.keyCode.UP || event.keyCode== $.ui.keyCode.DOWN || event.keyCode== $.ui.keyCode.DELETE || event.keyCode== $.ui.keyCode.BACKSPACE )
-						{
-							$("#id_cliente" ).val("");
-							$("#tel1" ).val("");
-							$("#mail" ).val("");
-											
-						}
-						if (event.keyCode==$.ui.keyCode.DELETE){
-							$("#nombre_cliente" ).val("");
-							$("#id_cliente" ).val("");
-							$("#tel1" ).val("");
-							$("#mail" ).val("");
-						}
-			});	
-	</script>
-
-  </body>
-</html>-->

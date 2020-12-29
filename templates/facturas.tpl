@@ -47,7 +47,10 @@
 					<td>{$factura->numero_factura}</td>
 					<td>{$factura->fecha_factura}</td>
 					<td>
-						<a href="#" data-toggle="tooltip" data-placement="top" title="<i class='glyphicon glyphicon-phone'></i> {$factura->telefono_cliente}<br><i class='glyphicon glyphicon-envelope'></i>  {$factura->email_cliente}" >{$factura->nombre_cliente}</a>
+						<a href="#" data-toggle="tooltip" data-placement="top" 
+							title="<i class='glyphicon glyphicon-phone'>{$factura->telefono_cliente}</i> <br><i class='glyphicon glyphicon-envelope'>{$factura->email_cliente}</i>" >
+							{$factura->nombre_cliente}
+						</a>
 					</td>
 					<td>{$factura->firstname}</td>
 					<td>
@@ -58,7 +61,7 @@
 					</td>
 					<td class='text-right'>{$factura->total_venta}</td>					
 					<td class="text-right">
-						<a href="editar_factura.php?id_factura=<?php echo $id_factura;?>" class='btn btn-default' title='Editar factura' >
+						<a href="editFactura/{$factura->id_factura}" class='btn btn-default' title='Editar factura' >
 							<i class="glyphicon glyphicon-edit"></i>
 						</a> 
 						<a href="#" class='btn btn-default' title='Descargar factura' onclick="imprimir_factura('<?php echo $id_factura;?>');">
@@ -79,4 +82,5 @@
 			</div>
 		</div>	
 	</div> 
+
 {include file="footer.tpl"}
