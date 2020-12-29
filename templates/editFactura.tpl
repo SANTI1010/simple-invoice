@@ -1,7 +1,5 @@
 {include file="header.tpl"}
 {include file="navbar.tpl"}
-
-
 	 
     <div class="container">
 	<div class="panel panel-info">
@@ -16,18 +14,19 @@
 		?>
 			<form class="form-horizontal" role="form" id="datos_factura">
 				<div class="form-group row">
+
 				  <label for="nombre_cliente" class="col-md-1 control-label">Cliente</label>
 				  <div class="col-md-3">
-					  <input type="text" class="form-control input-sm" id="nombre_cliente" placeholder="Selecciona un cliente" required value="<?php echo $nombre_cliente;?>">
+					  <input type="text" class="form-control input-sm" id="nombre_cliente" placeholder="Selecciona un cliente" required value="{{$factura->nombre_cliente}}">
 					  <input id="id_cliente" name="id_cliente" type='hidden' value="<?php echo $id_cliente;?>">	
 				  </div>
 				  <label for="tel1" class="col-md-1 control-label">Teléfono</label>
 							<div class="col-md-2">
-								<input type="text" class="form-control input-sm" id="tel1" placeholder="Teléfono" value="<?php echo $telefono_cliente;?>" readonly>
+								<input type="text" class="form-control input-sm" id="tel1" placeholder="Teléfono" value="{{$factura->telefono_cliente}}" readonly>
 							</div>
 					<label for="mail" class="col-md-1 control-label">Email</label>
 							<div class="col-md-3">
-								<input type="text" class="form-control input-sm" id="mail" placeholder="Email" readonly value="<?php echo $email_cliente;?>">
+								<input type="text" class="form-control input-sm" id="mail" placeholder="Email" readonly value="{{$factura->email_cliente}}">
 							</div>
 				 </div>
 						<div class="form-group row">
@@ -53,7 +52,7 @@
 							</div>
 							<label for="tel2" class="col-md-1 control-label">Fecha</label>
 							<div class="col-md-2">
-								<input type="text" class="form-control input-sm" id="fecha" value="<?php echo $fecha_factura;?>" readonly>
+								<input type="text" class="form-control input-sm" id="fecha" value="{{$factura->fecha_factura}}" readonly>
 							</div>
 							<label for="email" class="col-md-1 control-label">Pago</label>
 							<div class="col-md-2">
@@ -71,7 +70,6 @@
 								</select>
 							</div>
 						</div>
-				
 				
 				<div class="col-md-12">
 					<div class="pull-right">
@@ -149,3 +147,5 @@
 </table>
 
 </div>
+
+{include file="footer.tpl"}

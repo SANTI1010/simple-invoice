@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.34-dev-7, created on 2020-12-29 15:40:11
+/* Smarty version 3.1.34-dev-7, created on 2020-12-29 19:11:59
   from 'C:\xampp\htdocs\simple-invoice-master\templates\editFactura.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.34-dev-7',
-  'unifunc' => 'content_5feb3fcb2ef013_30773854',
+  'unifunc' => 'content_5feb716f8a0fa1_77283167',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'e0dbfd17670f7182e236ad0206e512df517d6484' => 
     array (
       0 => 'C:\\xampp\\htdocs\\simple-invoice-master\\templates\\editFactura.tpl',
-      1 => 1609252810,
+      1 => 1609265516,
       2 => 'file',
     ),
   ),
@@ -20,14 +20,13 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
     'file:header.tpl' => 1,
     'file:navbar.tpl' => 1,
+    'file:footer.tpl' => 1,
   ),
 ),false)) {
-function content_5feb3fcb2ef013_30773854 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5feb716f8a0fa1_77283167 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_subTemplateRender("file:header.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 $_smarty_tpl->_subTemplateRender("file:navbar.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 ?>
-
-
 	 
     <div class="container">
 	<div class="panel panel-info">
@@ -44,10 +43,13 @@ include("modal/buscar_productos.php");
 
 			<form class="form-horizontal" role="form" id="datos_factura">
 				<div class="form-group row">
+
 				  <label for="nombre_cliente" class="col-md-1 control-label">Cliente</label>
 				  <div class="col-md-3">
-					  <input type="text" class="form-control input-sm" id="nombre_cliente" placeholder="Selecciona un cliente" required value="<?php echo '<?php ';?>
-echo $nombre_cliente;<?php echo '?>';?>
+					  <input type="text" class="form-control input-sm" id="nombre_cliente" placeholder="Selecciona un cliente" required value="<?php ob_start();
+echo $_smarty_tpl->tpl_vars['factura']->value->nombre_cliente;
+$_prefixVariable1 = ob_get_clean();
+echo $_prefixVariable1;?>
 ">
 					  <input id="id_cliente" name="id_cliente" type='hidden' value="<?php echo '<?php ';?>
 echo $id_cliente;<?php echo '?>';?>
@@ -55,14 +57,18 @@ echo $id_cliente;<?php echo '?>';?>
 				  </div>
 				  <label for="tel1" class="col-md-1 control-label">Teléfono</label>
 							<div class="col-md-2">
-								<input type="text" class="form-control input-sm" id="tel1" placeholder="Teléfono" value="<?php echo '<?php ';?>
-echo $telefono_cliente;<?php echo '?>';?>
+								<input type="text" class="form-control input-sm" id="tel1" placeholder="Teléfono" value="<?php ob_start();
+echo $_smarty_tpl->tpl_vars['factura']->value->telefono_cliente;
+$_prefixVariable2 = ob_get_clean();
+echo $_prefixVariable2;?>
 " readonly>
 							</div>
 					<label for="mail" class="col-md-1 control-label">Email</label>
 							<div class="col-md-3">
-								<input type="text" class="form-control input-sm" id="mail" placeholder="Email" readonly value="<?php echo '<?php ';?>
-echo $email_cliente;<?php echo '?>';?>
+								<input type="text" class="form-control input-sm" id="mail" placeholder="Email" readonly value="<?php ob_start();
+echo $_smarty_tpl->tpl_vars['factura']->value->email_cliente;
+$_prefixVariable3 = ob_get_clean();
+echo $_prefixVariable3;?>
 ">
 							</div>
 				 </div>
@@ -99,8 +105,10 @@ echo $nombre_vendedor<?php echo '?>';?>
 							</div>
 							<label for="tel2" class="col-md-1 control-label">Fecha</label>
 							<div class="col-md-2">
-								<input type="text" class="form-control input-sm" id="fecha" value="<?php echo '<?php ';?>
-echo $fecha_factura;<?php echo '?>';?>
+								<input type="text" class="form-control input-sm" id="fecha" value="<?php ob_start();
+echo $_smarty_tpl->tpl_vars['factura']->value->fecha_factura;
+$_prefixVariable4 = ob_get_clean();
+echo $_prefixVariable4;?>
 " readonly>
 							</div>
 							<label for="email" class="col-md-1 control-label">Pago</label>
@@ -119,7 +127,6 @@ echo $fecha_factura;<?php echo '?>';?>
 								</select>
 							</div>
 						</div>
-				
 				
 				<div class="col-md-12">
 					<div class="pull-right">
@@ -226,8 +233,8 @@ echo number_format($total_factura,2);<?php echo '?>';?>
 
 </table>
 
+</div>
 
-
-	</div>
-<?php }
+<?php $_smarty_tpl->_subTemplateRender("file:footer.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
+}
 }

@@ -26,7 +26,7 @@ class ModelFacturas {
 	}
 
 	function getFacturaById($id) {
-		$sentencia = $this->db->prepare("SELECT * FROM facturas WHERE id_factura=?");
+		$sentencia = $this->db->prepare("SELECT * FROM facturas INNER JOIN clientes ON facturas.id_cliente = clientes.id_cliente INNER JOIN users WHERE facturas.id_vendedor = users.user_id AND id_factura=?");
 		$sentencia->execute(array($id));
 		return $sentencia->fetch(PDO::FETCH_OBJ);
 	}

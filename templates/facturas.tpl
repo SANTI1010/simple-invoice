@@ -52,7 +52,7 @@
 							{$factura->nombre_cliente}
 						</a>
 					</td>
-					<td>{$factura->firstname}</td>
+					<td>{$factura->firstname} {$factura->lastname}</td>
 					<td>
 
 						<span class="label {if $factura->estado_factura == 1} label-success {else} label-warning {/if}>">

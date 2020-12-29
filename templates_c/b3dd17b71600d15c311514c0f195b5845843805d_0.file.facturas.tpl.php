@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.34-dev-7, created on 2020-12-29 13:53:24
+/* Smarty version 3.1.34-dev-7, created on 2020-12-29 19:08:38
   from 'C:\xampp\htdocs\simple-invoice-master\templates\facturas.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.34-dev-7',
-  'unifunc' => 'content_5feb26c4cd8c69_27112716',
+  'unifunc' => 'content_5feb70a68b1ab6_13221935',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'b3dd17b71600d15c311514c0f195b5845843805d' => 
     array (
       0 => 'C:\\xampp\\htdocs\\simple-invoice-master\\templates\\facturas.tpl',
-      1 => 1609245453,
+      1 => 1609265317,
       2 => 'file',
     ),
   ),
@@ -23,7 +23,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:footer.tpl' => 1,
   ),
 ),false)) {
-function content_5feb26c4cd8c69_27112716 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5feb70a68b1ab6_13221935 (Smarty_Internal_Template $_smarty_tpl) {
 ?><title>Facturas</title>
 	<?php $_smarty_tpl->_subTemplateRender("file:header.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 ?>
@@ -91,6 +91,7 @@ $_smarty_tpl->tpl_vars['factura']->do_else = false;
 						</a>
 					</td>
 					<td><?php echo $_smarty_tpl->tpl_vars['factura']->value->firstname;?>
+ <?php echo $_smarty_tpl->tpl_vars['factura']->value->lastname;?>
 </td>
 					<td>
 
