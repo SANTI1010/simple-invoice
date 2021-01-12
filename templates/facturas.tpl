@@ -24,7 +24,11 @@
 								<button type="submit" class="btn btn-default">
 									<span class="glyphicon glyphicon-search" ></span> Buscar</button>
 								<span id="loader"></span>
+								<button type="submit" class="btn btn-default">
+									<span class="glyphicon glyphicon-trash" ></span> Limpiar</button>
+								<span id="loader"></span>
 							</div>
+
 						</div>				
 			</form>
 

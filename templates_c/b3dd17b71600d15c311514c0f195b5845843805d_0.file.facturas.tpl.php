@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.34-dev-7, created on 2021-01-11 19:44:50
+/* Smarty version 3.1.34-dev-7, created on 2021-01-12 15:05:50
   from 'C:\xampp\htdocs\simple-invoice-master\templates\facturas.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.34-dev-7',
-  'unifunc' => 'content_5ffc9ca2797b31_60557694',
+  'unifunc' => 'content_5ffdacbe5dae80_87352360',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'b3dd17b71600d15c311514c0f195b5845843805d' => 
     array (
       0 => 'C:\\xampp\\htdocs\\simple-invoice-master\\templates\\facturas.tpl',
-      1 => 1610390688,
+      1 => 1610460347,
       2 => 'file',
     ),
   ),
@@ -23,7 +23,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:footer.tpl' => 1,
   ),
 ),false)) {
-function content_5ffc9ca2797b31_60557694 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5ffdacbe5dae80_87352360 (Smarty_Internal_Template $_smarty_tpl) {
 ?><title>Facturas</title>
 	<?php $_smarty_tpl->_subTemplateRender("file:header.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 ?>
@@ -52,7 +52,11 @@ function content_5ffc9ca2797b31_60557694 (Smarty_Internal_Template $_smarty_tpl)
 								<button type="submit" class="btn btn-default">
 									<span class="glyphicon glyphicon-search" ></span> Buscar</button>
 								<span id="loader"></span>
+								<button type="submit" class="btn btn-default">
+									<span class="glyphicon glyphicon-trash" ></span> Limpiar</button>
+								<span id="loader"></span>
 							</div>
+
 						</div>				
 			</form>
 

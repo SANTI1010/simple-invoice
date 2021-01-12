@@ -40,7 +40,7 @@ class ModelFacturas {
 
 	function getFacturaFiltrados($busqueda) {
 		$buscar = "%" . $busqueda . "%";
-        $sentencia = $this->db->prepare("SELECT * FROM facturas JOIN clientes ON facturas.id_cliente = clientes.id_cliente WHERE clientes.nombre_cliente LIKE ? && clientes.id_cliente = facturas.id_cliente ORDER BY nombre_cliente ASC");
+        $sentencia = $this->db->prepare("SELECT * FROM facturas JOIN clientes ON facturas.id_cliente = clientes.id_cliente INNER JOIN users WHERE facturas.id_vendedor = users.user_id AND clientes.nombre_cliente LIKE ? && clientes.id_cliente = facturas.id_cliente ORDER BY nombre_cliente ASC");
         $sentencia->execute(array($buscar));
         return $sentencia->fetchAll(PDO::FETCH_OBJ);
 	}

@@ -60,18 +60,17 @@ class ControllerFacturas {
            $this->view->showError("La factura no existe");
 
         }     
-        
     }
 
 
     function Buscar() {
         if (isset($_GET["busqueda"])) {
             $busqueda = $_GET["busqueda"];
-            $productos = $this->model->getFacturaFiltrados($busqueda);
+            $facturas = $this->model->getFacturaFiltrados($busqueda);
             if (empty($productos)) {
                 //ver
             }
-          //  $this->view->showHome($productos, $busqueda, $marcas, $this->user, $this->logueado, $this->admin);
+           $this->view->ShowFacturas($facturas); 
         }
     }
 
