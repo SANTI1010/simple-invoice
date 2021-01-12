@@ -12,16 +12,16 @@
 				<h4><i class='glyphicon glyphicon-search'></i> Buscar Facturas</h4>
 			</div>
 			<div class="panel-body">
-				<form class="form-horizontal" role="form" id="datos_cotizacion">
+				<form class="form-horizontal" action="buscar" role="form" id="s">
 				
 						<div class="form-group row">
 							<label for="q" class="col-md-2 control-label">Cliente o # de factura</label>
 							<div class="col-md-5">
-								<input type="text" class="form-control" id="q" placeholder="Nombre del cliente o # de factura" onkeyup='load(1);'>
+								<input type="text" class="form-control" name="busqueda" placeholder="Nombre del cliente o # de factura">
 							</div>
 							
 							<div class="col-md-3">
-								<button type="button" class="btn btn-default" onclick='load(1);'>
+								<button type="submit" class="btn btn-default">
 									<span class="glyphicon glyphicon-search" ></span> Buscar</button>
 								<span id="loader"></span>
 							</div>

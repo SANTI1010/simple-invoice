@@ -51,9 +51,10 @@ class ControllerFacturas {
         $id_factura = $params[':ID'];
         
         if(isset($id_factura) && $id_factura != ""){
-            $factura = $this->model->getFacturaById($id_factura); 
+            $factura = $this->model->getFacturaById($id_factura);
+            $detalleFactura = $this->model->getDetalleFactura($id_factura);
             if (isset($factura)) {
-                $this->view->editFactura($factura);
+                $this->view->editFactura($factura,$detalleFactura);
             }
         } else {
            $this->view->showError("La factura no existe");
@@ -63,6 +64,16 @@ class ControllerFacturas {
     }
 
 
+    function Buscar() {
+        if (isset($_GET["busqueda"])) {
+            $busqueda = $_GET["busqueda"];
+            $productos = $this->model->getFacturaFiltrados($busqueda);
+            if (empty($productos)) {
+                //ver
+            }
+          //  $this->view->showHome($productos, $busqueda, $marcas, $this->user, $this->logueado, $this->admin);
+        }
+    }
 
 
 

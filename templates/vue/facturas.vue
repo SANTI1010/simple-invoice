@@ -1,6 +1,6 @@
 {literal}
 
-<div id="vue-comment">
+<div id="vue-facturas">
 	<input type="hidden" v-model="rol_user">
 
 	<ul id="comment-list" class="list-group" >

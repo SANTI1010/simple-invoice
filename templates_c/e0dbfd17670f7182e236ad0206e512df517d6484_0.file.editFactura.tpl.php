@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.34-dev-7, created on 2020-12-29 19:11:59
+/* Smarty version 3.1.34-dev-7, created on 2020-12-30 19:36:11
   from 'C:\xampp\htdocs\simple-invoice-master\templates\editFactura.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.34-dev-7',
-  'unifunc' => 'content_5feb716f8a0fa1_77283167',
+  'unifunc' => 'content_5fecc89b12e237_66174845',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'e0dbfd17670f7182e236ad0206e512df517d6484' => 
     array (
       0 => 'C:\\xampp\\htdocs\\simple-invoice-master\\templates\\editFactura.tpl',
-      1 => 1609265516,
+      1 => 1609353369,
       2 => 'file',
     ),
   ),
@@ -23,7 +23,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:footer.tpl' => 1,
   ),
 ),false)) {
-function content_5feb716f8a0fa1_77283167 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5fecc89b12e237_66174845 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_subTemplateRender("file:header.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 $_smarty_tpl->_subTemplateRender("file:navbar.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 ?>
@@ -157,81 +157,88 @@ echo $id_factura;<?php echo '?>';?>
 			
 		</div>
 	</div>		
-		 
 
 
-	<table class="table">
-<tr>
-	<th class='text-center'>CODIGO</th>
-	<th class='text-center'>CANT.</th>
-	<th>DESCRIPCION</th>
-	<th class='text-right'>PRECIO UNIT.</th>
-	<th class='text-right'>PRECIO TOTAL</th>
-	<th></th>
-</tr>
+		<table class="table">
+	<tr>
+		<th class='text-center'>CODIGO</th>
+		<th class='text-center'>CANT.</th>
+		<th>DESCRIPCION</th>
+		<th class='text-right'>PRECIO UNIT.</th>
+		<th class='text-right'>PRECIO TOTAL</th>
+		<th></th>
+	</tr>
 
+	<?php
+$_from = $_smarty_tpl->smarty->ext->_foreach->init($_smarty_tpl, $_smarty_tpl->tpl_vars['detalles']->value, 'detalle');
+$_smarty_tpl->tpl_vars['detalle']->do_else = true;
+if ($_from !== null) foreach ($_from as $_smarty_tpl->tpl_vars['detalle']->value) {
+$_smarty_tpl->tpl_vars['detalle']->do_else = false;
+?>
+	<?php $_smarty_tpl->_assignInScope('precio_venta', number_format($_smarty_tpl->tpl_vars['detalle']->value->precio_venta,2));?>
+	<?php $_smarty_tpl->_assignInScope('cantidad', $_smarty_tpl->tpl_vars['detalle']->value->cantidad);?>	
+	<?php $_smarty_tpl->_assignInScope('precio_total', $_smarty_tpl->tpl_vars['precio_venta']->value*$_smarty_tpl->tpl_vars['cantidad']->value);?>
+	<?php $_smarty_tpl->_assignInScope('sumador', 0);?>
+	<?php $_smarty_tpl->_assignInScope('sumador_total', $_smarty_tpl->tpl_vars['sumador']->value+$_smarty_tpl->tpl_vars['precio_total']->value);?>	
 		<tr>
-			<td class='text-center'><?php echo '<?php ';?>
-echo $codigo_producto;<?php echo '?>';?>
+			<td class='text-center'><?php echo $_smarty_tpl->tpl_vars['detalle']->value->codigo_producto;?>
 </td>
-			<td class='text-center'><?php echo '<?php ';?>
-echo $cantidad;<?php echo '?>';?>
+			<td class='text-center'><?php echo $_smarty_tpl->tpl_vars['detalle']->value->cantidad;?>
 </td>
-			<td><?php echo '<?php ';?>
-echo $nombre_producto;<?php echo '?>';?>
+			<td><?php echo $_smarty_tpl->tpl_vars['detalle']->value->nombre_producto;?>
 </td>
-			<td class='text-right'><?php echo '<?php ';?>
-echo $precio_venta_f;<?php echo '?>';?>
+			<td class='text-right'><?php echo $_smarty_tpl->tpl_vars['precio_venta']->value;?>
 </td>
-			<td class='text-right'><?php echo '<?php ';?>
-echo $precio_total_f;<?php echo '?>';?>
+			<td class='text-right'><?php echo number_format($_smarty_tpl->tpl_vars['precio_total']->value,2);?>
 </td>
-			<td class='text-center'><a href="#" onclick="eliminar('<?php echo '<?php ';?>
+			<td class='text-center'><a href="" onclick="eliminar('<?php echo '<?php ';?>
 echo $id_tmp <?php echo '?>';?>
 ')"><i class="glyphicon glyphicon-trash"></i></a></td>
-		</tr>		
-		<?php echo '<?php
-	';?>
+		</tr>
+	<?php
 }
-	$impuesto=get_row('perfil','impuesto', 'id_perfil', 1);
-	$subtotal=number_format($sumador_total,2,'.','');
-	$total_iva=($subtotal * $impuesto )/100;
-	$total_iva=number_format($total_iva,2,'.','');
-	$total_factura=$subtotal+$total_iva;
+$_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>	
+			
+			<?php echo '<?php
+		';?>
+}
+		$impuesto=get_row('perfil','impuesto', 'id_perfil', 1);
+		$subtotal=number_format($sumador_total,2,'.','');
+		$total_iva=($subtotal * $impuesto )/100;
+		$total_iva=number_format($total_iva,2,'.','');
+		$total_factura=$subtotal+$total_iva;
 
-<?php echo '?>';?>
+	<?php echo '?>';?>
 
-<tr>
-	<td class='text-right' colspan=4>SUBTOTAL <?php echo '<?php ';?>
+		<tr>
+			<td class='text-right' colspan=4>SUBTOTAL <?php echo '<?php ';?>
 echo $simbolo_moneda;<?php echo '?>';?>
 </td>
-	<td class='text-right'><?php echo '<?php ';?>
-echo number_format($subtotal,2);<?php echo '?>';?>
+			<td class='text-right'><?php echo number_format($_smarty_tpl->tpl_vars['sumador_total']->value,2);?>
 </td>
-	<td></td>
-</tr>
-<tr>
-	<td class='text-right' colspan=4>IVA (<?php echo '<?php ';?>
+			<td></td>
+		</tr>
+		<tr>
+			<td class='text-right' colspan=4>IVA (<?php echo '<?php ';?>
 echo $impuesto;<?php echo '?>';?>
 )% <?php echo '<?php ';?>
 echo $simbolo_moneda;<?php echo '?>';?>
 </td>
-	<td class='text-right'><?php echo '<?php ';?>
+			<td class='text-right'><?php echo '<?php ';?>
 echo number_format($total_iva,2);<?php echo '?>';?>
 </td>
-	<td></td>
-</tr>
-<tr>
-	<td class='text-right' colspan=4>TOTAL <?php echo '<?php ';?>
+			<td></td>
+		</tr>
+		<tr>
+			<td class='text-right' colspan=4>TOTAL <?php echo '<?php ';?>
 echo $simbolo_moneda;<?php echo '?>';?>
 </td>
-	<td class='text-right'><?php echo '<?php ';?>
+			<td class='text-right'><?php echo '<?php ';?>
 echo number_format($total_factura,2);<?php echo '?>';?>
 </td>
-	<td></td>
-</tr>
-
-</table>
+			<td></td>
+		</tr>
+	</table>
 
 </div>
 

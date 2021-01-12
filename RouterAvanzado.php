@@ -28,6 +28,9 @@
 	$r->addRoute("editFactura/:ID","GET","ControllerFacturas","EditFactura");
 
 
+	$r->addRoute("buscar","GET","ControllerFacturas","Buscar");
+
+
 	//Productos
 	$r->addRoute("productos","GET","ControllerProductos","Productos");
 	$r->addRoute("newProducto","GET","ControllerProductos","NewProducto");

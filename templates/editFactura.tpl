@@ -98,53 +98,59 @@
 			
 		</div>
 	</div>		
-		 
 
 
-	<table class="table">
-<tr>
-	<th class='text-center'>CODIGO</th>
-	<th class='text-center'>CANT.</th>
-	<th>DESCRIPCION</th>
-	<th class='text-right'>PRECIO UNIT.</th>
-	<th class='text-right'>PRECIO TOTAL</th>
-	<th></th>
-</tr>
+		<table class="table">
+	<tr>
+		<th class='text-center'>CODIGO</th>
+		<th class='text-center'>CANT.</th>
+		<th>DESCRIPCION</th>
+		<th class='text-right'>PRECIO UNIT.</th>
+		<th class='text-right'>PRECIO TOTAL</th>
+		<th></th>
+	</tr>
 
+	{foreach from = $detalles item=detalle}
+	{assign var="precio_venta" value= $detalle->precio_venta|number_format:2}
+	{assign var="cantidad" value= $detalle->cantidad}	
+	{assign var="precio_total" value= $precio_venta*$cantidad}
+	{assign var="sumador" value= 0}
+	{assign var="sumador_total" value= $sumador+$precio_total}	
 		<tr>
-			<td class='text-center'><?php echo $codigo_producto;?></td>
-			<td class='text-center'><?php echo $cantidad;?></td>
-			<td><?php echo $nombre_producto;?></td>
-			<td class='text-right'><?php echo $precio_venta_f;?></td>
-			<td class='text-right'><?php echo $precio_total_f;?></td>
-			<td class='text-center'><a href="#" onclick="eliminar('<?php echo $id_tmp ?>')"><i class="glyphicon glyphicon-trash"></i></a></td>
-		</tr>		
-		<?php
-	}
-	$impuesto=get_row('perfil','impuesto', 'id_perfil', 1);
-	$subtotal=number_format($sumador_total,2,'.','');
-	$total_iva=($subtotal * $impuesto )/100;
-	$total_iva=number_format($total_iva,2,'.','');
-	$total_factura=$subtotal+$total_iva;
+			<td class='text-center'>{$detalle->codigo_producto}</td>
+			<td class='text-center'>{$detalle->cantidad}</td>
+			<td>{$detalle->nombre_producto}</td>
+			<td class='text-right'>{$precio_venta}</td>
+			<td class='text-right'>{$precio_total|number_format:2}</td>
+			<td class='text-center'><a href="" onclick="eliminar('<?php echo $id_tmp ?>')"><i class="glyphicon glyphicon-trash"></i></a></td>
+		</tr>
+	{/foreach}	
+			
+			<?php
+		}
+		$impuesto=get_row('perfil','impuesto', 'id_perfil', 1);
+		$subtotal=number_format($sumador_total,2,'.','');
+		$total_iva=($subtotal * $impuesto )/100;
+		$total_iva=number_format($total_iva,2,'.','');
+		$total_factura=$subtotal+$total_iva;
 
-?>
-<tr>
-	<td class='text-right' colspan=4>SUBTOTAL <?php echo $simbolo_moneda;?></td>
-	<td class='text-right'><?php echo number_format($subtotal,2);?></td>
-	<td></td>
-</tr>
-<tr>
-	<td class='text-right' colspan=4>IVA (<?php echo $impuesto;?>)% <?php echo $simbolo_moneda;?></td>
-	<td class='text-right'><?php echo number_format($total_iva,2);?></td>
-	<td></td>
-</tr>
-<tr>
-	<td class='text-right' colspan=4>TOTAL <?php echo $simbolo_moneda;?></td>
-	<td class='text-right'><?php echo number_format($total_factura,2);?></td>
-	<td></td>
-</tr>
-
-</table>
+	?>
+		<tr>
+			<td class='text-right' colspan=4>SUBTOTAL <?php echo $simbolo_moneda;?></td>
+			<td class='text-right'>{$sumador_total|number_format:2}</td>
+			<td></td>
+		</tr>
+		<tr>
+			<td class='text-right' colspan=4>IVA (<?php echo $impuesto;?>)% <?php echo $simbolo_moneda;?></td>
+			<td class='text-right'><?php echo number_format($total_iva,2);?></td>
+			<td></td>
+		</tr>
+		<tr>
+			<td class='text-right' colspan=4>TOTAL <?php echo $simbolo_moneda;?></td>
+			<td class='text-right'><?php echo number_format($total_factura,2);?></td>
+			<td></td>
+		</tr>
+	</table>
 
 </div>
 

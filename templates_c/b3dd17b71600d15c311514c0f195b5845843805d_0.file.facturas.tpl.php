@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.34-dev-7, created on 2020-12-29 19:08:38
+/* Smarty version 3.1.34-dev-7, created on 2021-01-11 19:44:50
   from 'C:\xampp\htdocs\simple-invoice-master\templates\facturas.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.34-dev-7',
-  'unifunc' => 'content_5feb70a68b1ab6_13221935',
+  'unifunc' => 'content_5ffc9ca2797b31_60557694',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'b3dd17b71600d15c311514c0f195b5845843805d' => 
     array (
       0 => 'C:\\xampp\\htdocs\\simple-invoice-master\\templates\\facturas.tpl',
-      1 => 1609265317,
+      1 => 1610390688,
       2 => 'file',
     ),
   ),
@@ -23,7 +23,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:footer.tpl' => 1,
   ),
 ),false)) {
-function content_5feb70a68b1ab6_13221935 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5ffc9ca2797b31_60557694 (Smarty_Internal_Template $_smarty_tpl) {
 ?><title>Facturas</title>
 	<?php $_smarty_tpl->_subTemplateRender("file:header.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 ?>
@@ -40,16 +40,16 @@ function content_5feb70a68b1ab6_13221935 (Smarty_Internal_Template $_smarty_tpl)
 				<h4><i class='glyphicon glyphicon-search'></i> Buscar Facturas</h4>
 			</div>
 			<div class="panel-body">
-				<form class="form-horizontal" role="form" id="datos_cotizacion">
+				<form class="form-horizontal" action="buscar" role="form" id="s">
 				
 						<div class="form-group row">
 							<label for="q" class="col-md-2 control-label">Cliente o # de factura</label>
 							<div class="col-md-5">
-								<input type="text" class="form-control" id="q" placeholder="Nombre del cliente o # de factura" onkeyup='load(1);'>
+								<input type="text" class="form-control" name="busqueda" placeholder="Nombre del cliente o # de factura">
 							</div>
 							
 							<div class="col-md-3">
-								<button type="button" class="btn btn-default" onclick='load(1);'>
+								<button type="submit" class="btn btn-default">
 									<span class="glyphicon glyphicon-search" ></span> Buscar</button>
 								<span id="loader"></span>
 							</div>

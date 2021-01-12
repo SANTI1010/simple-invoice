@@ -19,10 +19,12 @@ class ViewFacturas {
 		$smarty->display('templates/newFactura.tpl'); 
 	}
 
-	function editFactura($factura){
+	function editFactura($factura,$detalles){
 		$smarty = new Smarty();
 		$smarty->assign('factura', $factura);
+		$smarty->assign('detalles', $detalles);
 		$smarty->display('templates/editFactura.tpl'); 
+
 	}
 }
 
