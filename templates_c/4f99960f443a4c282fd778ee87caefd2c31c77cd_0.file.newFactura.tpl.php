@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.34-dev-7, created on 2020-12-29 13:11:12
+/* Smarty version 3.1.34-dev-7, created on 2021-01-12 19:21:10
   from 'C:\xampp\htdocs\simple-invoice-master\templates\newFactura.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.34-dev-7',
-  'unifunc' => 'content_5feb1ce0ee9690_04629410',
+  'unifunc' => 'content_5ffde896a985c0_51175448',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '4f99960f443a4c282fd778ee87caefd2c31c77cd' => 
     array (
       0 => 'C:\\xampp\\htdocs\\simple-invoice-master\\templates\\newFactura.tpl',
-      1 => 1609243851,
+      1 => 1610475668,
       2 => 'file',
     ),
   ),
@@ -26,11 +26,14 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:footer.tpl' => 1,
   ),
 ),false)) {
-function content_5feb1ce0ee9690_04629410 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5ffde896a985c0_51175448 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_checkPlugins(array(0=>array('file'=>'C:\\xampp\\htdocs\\simple-invoice-master\\libs\\smarty\\plugins\\modifier.date_format.php','function'=>'smarty_modifier_date_format',),));
 $_smarty_tpl->_subTemplateRender("file:header.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 $_smarty_tpl->_subTemplateRender("file:navbar.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 ?>
+
+
+
 
     <div class="container">
 	<div class="panel panel-info">
@@ -49,8 +52,19 @@ $_smarty_tpl->_subTemplateRender("file:navbar.tpl", $_smarty_tpl->cache_id, $_sm
 				<div class="form-group row">
 				  <label for="nombre_cliente" class="col-md-1 control-label">Cliente</label>
 				  <div class="col-md-3">
-					  <input type="text" class="form-control input-sm" id="nombre_cliente" placeholder="Selecciona un cliente" required>
-					  <input id="id_cliente" type='hidden'>	
+					 	<select class="form-control input-sm" id="id_vendedor">
+							<?php
+$_from = $_smarty_tpl->smarty->ext->_foreach->init($_smarty_tpl, $_smarty_tpl->tpl_vars['clientes']->value, 'cliente');
+$_smarty_tpl->tpl_vars['cliente']->do_else = true;
+if ($_from !== null) foreach ($_from as $_smarty_tpl->tpl_vars['cliente']->value) {
+$_smarty_tpl->tpl_vars['cliente']->do_else = false;
+?>
+						    	<option><?php echo $_smarty_tpl->tpl_vars['cliente']->value->nombre_cliente;?>
+</option>
+								<?php
+}
+$_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
+						</select>	
 				  </div>
 				  <label for="tel1" class="col-md-1 control-label">Teléfono</label>
 							<div class="col-md-2">
@@ -114,36 +128,37 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
 			</form>	
 			
 		<div id="resultados" class='col-md-12' style="margin-top:10px"></div><!-- Carga los datos ajax -->			
-		</div>
-	</div>		
-		  <div class="row-fluid">
-			<div class="col-md-12">
-			
+	</div>
+
 	
 
-			
+	</div>	
+	<button type="submit" class="btn btn-default">
+		<span class="glyphicon glyphicon-ok"></span> Agregar
+	</button>	
+		  <div class="row-fluid">
+			<div class="col-md-12">
 			</div>	
 		 </div>
 	</div>
 
-	  <?php echo '<script'; ?>
+	<?php echo '<script'; ?>
  src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"><?php echo '</script'; ?>
 >
-   
-  <?php echo '<script'; ?>
+  	<?php echo '<script'; ?>
  src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"><?php echo '</script'; ?>
 >
-<link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+	<link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
     <?php echo '<script'; ?>
  src="//code.jquery.com/ui/1.11.4/jquery-ui.js"><?php echo '</script'; ?>
 >
-<!--  <?php echo '<script'; ?>
+	<!--  <?php echo '<script'; ?>
  src="js/facturas.js"><?php echo '</script'; ?>
 >-->
 	<?php echo '<script'; ?>
  src="js/invoice.js"><?php echo '</script'; ?>
 >
-	<?php $_smarty_tpl->_subTemplateRender("file:footer.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
-?>
-	<?php }
+	
+<?php $_smarty_tpl->_subTemplateRender("file:footer.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
+?>	<?php }
 }

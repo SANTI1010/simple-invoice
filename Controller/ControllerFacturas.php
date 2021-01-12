@@ -4,6 +4,7 @@ require_once "./View/ViewFacturas.php";
 require_once "./Model/ModelFacturas.php";
 require_once "./Model/ModelUser.php";
 require_once "./Helpers/Helper.php";
+require_once "./Model/ModelClientes.php";
 
 
 
@@ -13,13 +14,14 @@ class ControllerFacturas {
     private $model;
     private $ModelUser;
     private $authHelper;
+    private $modelClientes;
 
     public function __construct() {
         $this->view = new ViewFacturas();
         $this->authHelper = new Helper();
         $this->model = new ModelFacturas();
         $this->modelUser = new ModelUser();
-       
+        $this->modelClientes = new ModelClientes();
     }
 
 
@@ -38,8 +40,9 @@ class ControllerFacturas {
         $this->authHelper->checkLoggedIn();  
         //vendedores son los usuarios
         $vendedores = $this->modelUser->getUsers();
-        if(isset($vendedores)){
-            $this->view->newFactura($vendedores);     
+        $clientes = $this->modelClientes->getClientes();
+        if(isset($vendedores) && isset($clientes)){
+            $this->view->newFactura($vendedores,$clientes);     
         } else {
             $this->view->ShowError("Algo salio mal");   
         }        

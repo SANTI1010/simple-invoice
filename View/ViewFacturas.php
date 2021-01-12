@@ -13,9 +13,10 @@ class ViewFacturas {
 		$smarty->display('templates/facturas.tpl'); 
 	}
 
-	function newFactura($vendedores){
+	function newFactura($vendedores,$clientes){
 		$smarty = new Smarty();
 		$smarty->assign('vendedores', $vendedores);
+		$smarty->assign('clientes', $clientes);
 		$smarty->display('templates/newFactura.tpl'); 
 	}
 

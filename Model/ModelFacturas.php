@@ -1,7 +1,6 @@
 <?php 
 require_once "./View/ViewFacturas.php";
 
-
 class ModelFacturas {
 	
 	private $db;
@@ -17,7 +16,6 @@ class ModelFacturas {
 		$sentencia->execute(array($user));
 		return $sentencia->fetch(PDO::FETCH_OBJ);//me lo trae en formato OBJETO
 	}
-
 
 	function getFacturas(){
 		$sentencia = $this->db->prepare("SELECT * FROM facturas INNER JOIN clientes ON facturas.id_cliente = clientes.id_cliente INNER JOIN users WHERE facturas.id_vendedor = users.user_id");
@@ -45,10 +43,6 @@ class ModelFacturas {
         return $sentencia->fetchAll(PDO::FETCH_OBJ);
 	}
 
-
-
 }
-
-
 
 ?>

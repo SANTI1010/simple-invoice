@@ -1,6 +1,9 @@
 {include file="header.tpl"}
 {include file="navbar.tpl"}
 
+
+
+
     <div class="container">
 	<div class="panel panel-info">
 		<div class="panel-heading">
@@ -15,8 +18,11 @@
 				<div class="form-group row">
 				  <label for="nombre_cliente" class="col-md-1 control-label">Cliente</label>
 				  <div class="col-md-3">
-					  <input type="text" class="form-control input-sm" id="nombre_cliente" placeholder="Selecciona un cliente" required>
-					  <input id="id_cliente" type='hidden'>	
+					 	<select class="form-control input-sm" id="id_vendedor">
+							{foreach from = $clientes item=cliente}
+						    	<option>{$cliente->nombre_cliente}</option>
+								{/foreach}
+						</select>	
 				  </div>
 				  <label for="tel1" class="col-md-1 control-label">Teléfono</label>
 							<div class="col-md-2">
@@ -71,24 +77,25 @@
 			</form>	
 			
 		<div id="resultados" class='col-md-12' style="margin-top:10px"></div><!-- Carga los datos ajax -->			
-		</div>
-	</div>		
-		  <div class="row-fluid">
-			<div class="col-md-12">
-			
+	</div>
+
 	
 
-			
+	</div>	
+	<button type="submit" class="btn btn-default">
+		<span class="glyphicon glyphicon-ok"></span> Agregar
+	</button>	
+		  <div class="row-fluid">
+			<div class="col-md-12">
 			</div>	
 		 </div>
 	</div>
 
-	  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-   
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
-<link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+	<link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
     <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
-<!--  <script src="js/facturas.js"></script>-->
+	<!--  <script src="js/facturas.js"></script>-->
 	<script src="js/invoice.js"></script>
-	{include file="footer.tpl"}
 	
+{include file="footer.tpl"}	

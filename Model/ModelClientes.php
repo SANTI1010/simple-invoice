@@ -1,16 +1,22 @@
 <?php 
+require_once "./View/ViewFacturas.php";
 
-$conexion = new mysqli("localhost","root","","simple_invoice");
-$cliente = $_GET['q'];
+class ModelClientes {
+	
+	private $db;
 
+	function __construct() {
+		$this->view = new ViewFacturas();
+		$this->db = new PDO('mysql:host=localhost;'.'dbname=simple_invoice;charset=utf8', 'root', ''); 
+	}	
+	
 
-$resultado = $conexion->query("SELECT * FROM clientes WHERE nombre_cliente LIKE '%$cliente%'");
+	function getClientes(){
+		$sentencia = $this->db->prepare("SELECT * FROM clientes");
+		$sentencia->execute();
+		return $sentencia->fetchAll(PDO::FETCH_OBJ);
+	}
 
-$datos = array();
-
-while($row = $resultado->fetch_asocc()){
-	$datos[] = $row['nombre_cliente'];
 }
 
-echo json_encode($datos);
-
+?>
